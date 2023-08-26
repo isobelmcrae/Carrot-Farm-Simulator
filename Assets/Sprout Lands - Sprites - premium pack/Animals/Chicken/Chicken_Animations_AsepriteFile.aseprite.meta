@@ -1,7 +1,584 @@
 fileFormatVersion: 2
 guid: a286e9b20775f46418516baacbe97373
-DefaultImporter:
+ScriptedImporter:
+  internalIDToNameTable: []
   externalObjects: {}
+  serializedVersion: 2
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Chicken_Animations_AsepriteFile_Frame_0
+    originalName: 
+    pivot: {x: 0.28947368, y: 0.56}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 304
+      height: 1600
+    spriteID: b694f4666e1c93a4cbd3ad53395acc5f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Chicken_Animations_AsepriteFile_Frame_1
+    originalName: 
+    pivot: {x: 0.28947368, y: 0.56}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1612
+      width: 304
+      height: 1600
+    spriteID: dfe4af7127896094aa415e26826bcfc4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1612}
+  - name: Chicken_Animations_AsepriteFile_Frame_2
+    originalName: 
+    pivot: {x: 0.28947368, y: 0.56}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 316
+      y: 4
+      width: 304
+      height: 1600
+    spriteID: edd0eeb9be6504d4f948c67735b19db0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 316, y: 4}
+  - name: Chicken_Animations_AsepriteFile_Frame_3
+    originalName: 
+    pivot: {x: 0.28947368, y: 0.56}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 316
+      y: 1612
+      width: 304
+      height: 1600
+    spriteID: 6fc470789189b254fabc109f37391b5b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 316, y: 1612}
+  - name: Chicken_Animations_AsepriteFile_Frame_4
+    originalName: 
+    pivot: {x: 0.28947368, y: 0.56}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 628
+      y: 4
+      width: 304
+      height: 1600
+    spriteID: 958fefeb5c6c18c4eabfa1a0301a938e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 628, y: 4}
+  - name: Chicken_Animations_AsepriteFile_Frame_5
+    originalName: 
+    pivot: {x: 0.28947368, y: 0.56}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 628
+      y: 1612
+      width: 304
+      height: 1600
+    spriteID: e48ca47113b427c40af14fcca6b85911
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 628, y: 1612}
+  - name: Chicken_Animations_AsepriteFile_Frame_6
+    originalName: 
+    pivot: {x: 0.28947368, y: 0.56}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 940
+      y: 4
+      width: 304
+      height: 1600
+    spriteID: fe3940ce6b974854baa495357f58a741
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 940, y: 4}
+  - name: Chicken_Animations_AsepriteFile_Frame_7
+    originalName: 
+    pivot: {x: 0.28947368, y: 0.56}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 940
+      y: 1612
+      width: 304
+      height: 1600
+    spriteID: 3eee697d31b4bfa47a9f70c8490f8c9c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 940, y: 1612}
+  - name: Chicken_Animations_AsepriteFile_Frame_8
+    originalName: 
+    pivot: {x: 0.28947368, y: 0.56}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1252
+      y: 4
+      width: 304
+      height: 1600
+    spriteID: 656645606e7339e44a79dff8c43fb41a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1252, y: 4}
+  - name: Chicken_Animations_AsepriteFile_Frame_9
+    originalName: 
+    pivot: {x: 0.28947368, y: 0.56}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1252
+      y: 1612
+      width: 304
+      height: 1600
+    spriteID: 28d93f55c1399e243b1eedf2d00a0480
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1252, y: 1612}
+  - name: Chicken_Animations_AsepriteFile_Frame_10
+    originalName: 
+    pivot: {x: 0.28947368, y: 0.56}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1564
+      y: 4
+      width: 304
+      height: 1600
+    spriteID: 66b03149e482a1f4794c55fc6a7e8e51
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1564, y: 4}
+  - name: Chicken_Animations_AsepriteFile_Frame_11
+    originalName: 
+    pivot: {x: 0.28947368, y: 0.56}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1564
+      y: 1612
+      width: 304
+      height: 1600
+    spriteID: 979bc2130c5134f46b1283b1a8487159
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1564, y: 1612}
+  - name: Chicken_Animations_AsepriteFile_Frame_12
+    originalName: 
+    pivot: {x: 0.28947368, y: 0.56}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1876
+      y: 4
+      width: 304
+      height: 1600
+    spriteID: e8cc7345e5490c94caa82e2c6c33ed55
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1876, y: 4}
+  - name: Chicken_Animations_AsepriteFile_Frame_13
+    originalName: 
+    pivot: {x: 0.28947368, y: 0.56}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1876
+      y: 1612
+      width: 304
+      height: 1600
+    spriteID: ecef4f49f4a084c48b3639788d285485
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1876, y: 1612}
+  - name: Chicken_Animations_AsepriteFile_Frame_14
+    originalName: 
+    pivot: {x: 0.28947368, y: 0.56}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2188
+      y: 4
+      width: 304
+      height: 1600
+    spriteID: d25d85c03ae49f34db40d6285332716e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2188, y: 4}
+  - name: Chicken_Animations_AsepriteFile_Frame_15
+    originalName: 
+    pivot: {x: 0.28947368, y: 0.56}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2188
+      y: 1612
+      width: 304
+      height: 1600
+    spriteID: fe15d030f610b434880689fdef836419
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2188, y: 1612}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 1027066927
+    name: Chicken_Animations_AsepriteFile
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Chicken_Animations_AsepriteFile_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 0
+        y: -896
+        width: 304
+        height: 1600
+      spriteId: b694f4666e1c93a4cbd3ad53395acc5f
+    - name: Chicken_Animations_AsepriteFile_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 0
+        y: -896
+        width: 304
+        height: 1600
+      spriteId: dfe4af7127896094aa415e26826bcfc4
+    - name: Chicken_Animations_AsepriteFile_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 0
+        y: -896
+        width: 304
+        height: 1600
+      spriteId: edd0eeb9be6504d4f948c67735b19db0
+    - name: Chicken_Animations_AsepriteFile_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 0
+        y: -896
+        width: 304
+        height: 1600
+      spriteId: 6fc470789189b254fabc109f37391b5b
+    - name: Chicken_Animations_AsepriteFile_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 0
+        y: -896
+        width: 304
+        height: 1600
+      spriteId: 958fefeb5c6c18c4eabfa1a0301a938e
+    - name: Chicken_Animations_AsepriteFile_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 0
+        y: -896
+        width: 304
+        height: 1600
+      spriteId: e48ca47113b427c40af14fcca6b85911
+    - name: Chicken_Animations_AsepriteFile_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 0
+        y: -896
+        width: 304
+        height: 1600
+      spriteId: fe3940ce6b974854baa495357f58a741
+    - name: Chicken_Animations_AsepriteFile_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 0
+        y: -896
+        width: 304
+        height: 1600
+      spriteId: 3eee697d31b4bfa47a9f70c8490f8c9c
+    - name: Chicken_Animations_AsepriteFile_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 0
+        y: -896
+        width: 304
+        height: 1600
+      spriteId: 656645606e7339e44a79dff8c43fb41a
+    - name: Chicken_Animations_AsepriteFile_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 0
+        y: -896
+        width: 304
+        height: 1600
+      spriteId: 28d93f55c1399e243b1eedf2d00a0480
+    - name: Chicken_Animations_AsepriteFile_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 0
+        y: -896
+        width: 304
+        height: 1600
+      spriteId: 66b03149e482a1f4794c55fc6a7e8e51
+    - name: Chicken_Animations_AsepriteFile_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 0
+        y: -896
+        width: 304
+        height: 1600
+      spriteId: 979bc2130c5134f46b1283b1a8487159
+    - name: Chicken_Animations_AsepriteFile_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 0
+        y: -896
+        width: 304
+        height: 1600
+      spriteId: e8cc7345e5490c94caa82e2c6c33ed55
+    - name: Chicken_Animations_AsepriteFile_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 0
+        y: -896
+        width: 304
+        height: 1600
+      spriteId: ecef4f49f4a084c48b3639788d285485
+    - name: Chicken_Animations_AsepriteFile_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 0
+        y: -896
+        width: 304
+        height: 1600
+      spriteId: d25d85c03ae49f34db40d6285332716e
+    - name: Chicken_Animations_AsepriteFile_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 0
+        y: -896
+        width: 304
+        height: 1600
+      spriteId: fe15d030f610b434880689fdef836419
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 176, y: 496}
