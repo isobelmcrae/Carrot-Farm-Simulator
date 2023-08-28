@@ -1,11 +1,6 @@
-// kayla i removed the GetInput() function 
-// because i thought it could be incorporated into the FixedUpdate thing,
-// but if you think there's an issue with that that i've missed
-// lmk and ill change it back ty :)
-// - iso
-
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Tilemaps;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -16,6 +11,9 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movement;
     public Animator animator;
+
+    // variable to change sorting order of roof when player collides with door
+    public bool enter = false;
 
     private void Start()
     {
@@ -33,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
+
     }
     
     // moves character
@@ -43,7 +42,20 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = movement * moveSpeed * Time.deltaTime;
     }
 
-    
+    // uses 'enter' variable to determine whether the player is inside the house, and changes the sorting order of the roof accordingly
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Door"))
+        {
+            if (enter == true) {
+                enter = false;
+                GameObject.Find("House_Roof").GetComponent<TilemapRenderer>().sortingOrder = 6;
+            } else {
+                enter = true;
+                GameObject.Find("House_Roof").GetComponent<TilemapRenderer>().sortingOrder = -1;
+            }
+        }
+    }
 
 }
 
