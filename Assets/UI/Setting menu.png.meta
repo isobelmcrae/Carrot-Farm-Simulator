@@ -118,14 +118,14 @@ TextureImporter:
         width: 106
         height: 122
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d8fdee42d7f149a1b17b34f99e93b4b
-      internalID: 1290405370
+      spriteID: ac013cdea738cd460800000000000000
+      internalID: 7267828462667370698
       vertices: []
       indices: 
       edges: []
@@ -139,14 +139,14 @@ TextureImporter:
         width: 106
         height: 122
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1dde9d65eca624b07aa3e64d1fa8f070
-      internalID: 1231584673
+      spriteID: 1f0e814bd2efab64a9e124c0f699b68d
+      internalID: 789844013
       vertices: []
       indices: 
       edges: []
@@ -154,7 +154,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: b379b878eab5b8546bf3aca973f88ae1
     internalID: 0
     vertices: []
     indices: 
@@ -162,8 +162,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Setting menu_0: 1290405370
-      Setting menu_1: 1231584673
+      Setting menu_0: 7267828462667370698
+      Setting menu_1: 789844013
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
