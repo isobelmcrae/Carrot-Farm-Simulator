@@ -42537,6 +42537,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 162518408, guid: 9cb2b371d93c642758f6e85d44e1bc8b, type: 3}
+    - target: {fileID: 3536366396061950167, guid: ee9e199f704484047ace200a71ef14d8, type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5261465574297563082, guid: ee9e199f704484047ace200a71ef14d8, type: 3}
       propertyPath: m_Name
       value: Collectable
