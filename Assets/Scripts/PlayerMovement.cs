@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // character movespeed
+    // player movement speed
     public float moveSpeed;
 
     private Rigidbody2D rb;
@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // animations + getting user input
+    // controls animations, fetches user input
     private void Update()
     {
         // movement animations 
@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
     
-    // moves character
+    // moves player using input from Update()
     private void FixedUpdate()
     {
         movement = new Vector2(movement.x, movement.y);
