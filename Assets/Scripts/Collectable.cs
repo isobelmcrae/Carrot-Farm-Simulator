@@ -5,22 +5,22 @@ using UnityEngine;
 public class Collectable : MonoBehaviour
 {
     public CollectableType type;
+    public Sprite icon;
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
          if (other.gameObject.CompareTag("Player")) {
             Player player = other.GetComponent<Player>();
 
-            player.numCarrotSeed++;
+            player.inventory.Add(this);
             Destroy(this.gameObject);
          }
     }
 
-    public enum CollectableType 
-    {
-        NONE, CARROT_SEED
-    }
+}
 
-
+public enum CollectableType 
+{
+    NONE, CARROT_SEED
 }
  
