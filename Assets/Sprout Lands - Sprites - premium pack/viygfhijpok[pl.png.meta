@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5f4355f2a31b6454687008d6226fd3da
+guid: a7b8f5f73873b4534af0c6542d81c0b1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tools and meterials_0
+      name: viygfhijpok[pl_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 34
-        width: 16
-        height: 10
+        x: 14
+        y: 1120
+        width: 20
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2c502d4ea468431a8441b974f3a9af0
-      internalID: -373377388
+      spriteID: 47135b08034ba4c018a964a8bc77cae1
+      internalID: 1766158026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tools and meterials_1
+      name: viygfhijpok[pl_1
       rect:
         serializedVersion: 2
-        x: 18
-        y: 32
-        width: 13
-        height: 16
+        x: 62
+        y: 1120
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c39dc195af55451db2d8108d6caca8d
-      internalID: -527970867
+      spriteID: 394e1d53ed270431a8090e166517310e
+      internalID: -185732795
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tools and meterials_2
+      name: viygfhijpok[pl_2
       rect:
         serializedVersion: 2
-        x: 34
-        y: 33
-        width: 13
-        height: 15
+        x: 110
+        y: 1120
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2e182b7e4fe24c54812615b8555a95d
-      internalID: 30038155
+      spriteID: 7a1e073baf4344f4996d4ea43c220ea8
+      internalID: -70041657
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tools and meterials_3
+      name: viygfhijpok[pl_3
       rect:
         serializedVersion: 2
-        x: 48
-        y: 33
-        width: 16
-        height: 15
+        x: 158
+        y: 1120
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eedb706f99ed748fda606cd411dfe62d
-      internalID: -1379477369
+      spriteID: 07edcab7539104cc08b49dadc95871b3
+      internalID: 1469312977
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tools and meterials_4
+      name: viygfhijpok[pl_4
       rect:
         serializedVersion: 2
-        x: 1
-        y: 17
-        width: 15
-        height: 14
+        x: 206
+        y: 1120
+        width: 20
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48921bb8a95e24095b216a34c72e9d57
-      internalID: 1165383547
+      spriteID: 2b69374d70f36435ca1db1e5767aa80a
+      internalID: 1865805094
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tools and meterials_5
+      name: viygfhijpok[pl_5
       rect:
         serializedVersion: 2
-        x: 17
-        y: 17
-        width: 13
-        height: 14
+        x: 254
+        y: 1120
+        width: 20
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98eb403d2657e45968706bcc64eb1abf
-      internalID: -1380119409
+      spriteID: 9d89ad67bad88416ab9c82faa6a66eef
+      internalID: -1375383402
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tools and meterials_6
+      name: viygfhijpok[pl_6
       rect:
         serializedVersion: 2
-        x: 33
-        y: 17
-        width: 14
-        height: 14
+        x: 302
+        y: 1120
+        width: 20
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc31ab630f002425e806757246baee95
-      internalID: -1338950357
+      spriteID: 96363b9aff27a4c00944f6bb3006a271
+      internalID: 1414891529
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tools and meterials_7
+      name: viygfhijpok[pl_7
       rect:
         serializedVersion: 2
-        x: 50
-        y: 18
-        width: 12
-        height: 12
+        x: 350
+        y: 1120
+        width: 20
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,92 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78d8f27dac4fa41feb47692e16166323
-      internalID: 1714811622
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tools and meterials_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1
-        width: 16
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 38a2f59c4a6d042fbb9d6651519ad27b
-      internalID: -195083783
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tools and meterials_9
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 1
-        width: 14
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cc1f2b55fceee478b8fbdce57075d23c
-      internalID: 303753803
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tools and meterials_10
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 1
-        width: 16
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5bf17cdb9956940b9a50d4bd63eeda07
-      internalID: 1006246043
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tools and meterials_11
-      rect:
-        serializedVersion: 2
-        x: 50
-        y: 2
-        width: 12
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cb0855dfc26b0409e926e1be4d86b6f8
-      internalID: 1277427058
+      spriteID: 450e32c4d694f4cf2a19be7d16bb7135
+      internalID: -500731094
       vertices: []
       indices: 
       edges: []
@@ -372,18 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tools and meterials_0: -373377388
-      tools and meterials_1: -527970867
-      tools and meterials_10: 1006246043
-      tools and meterials_11: 1277427058
-      tools and meterials_2: 30038155
-      tools and meterials_3: -1379477369
-      tools and meterials_4: 1165383547
-      tools and meterials_5: -1380119409
-      tools and meterials_6: -1338950357
-      tools and meterials_7: 1714811622
-      tools and meterials_8: -195083783
-      tools and meterials_9: 303753803
+      viygfhijpok[pl_0: 1766158026
+      viygfhijpok[pl_1: -185732795
+      viygfhijpok[pl_2: -70041657
+      viygfhijpok[pl_3: 1469312977
+      viygfhijpok[pl_4: 1865805094
+      viygfhijpok[pl_5: -1375383402
+      viygfhijpok[pl_6: 1414891529
+      viygfhijpok[pl_7: -500731094
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
