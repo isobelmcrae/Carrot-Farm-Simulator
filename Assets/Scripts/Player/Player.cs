@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Player : MonoBehaviour
 {
     public Inventory inventory;
     public TileManager tileManager;
+    [SerializeField] private GameObject tilledTile;
 
     // creates inventory with 16 slots
     private void Awake()
@@ -15,20 +17,20 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Mouse0))
+        if(Input.GetKeyDown(KeyCode.Space))
         {
-            Vector3Int mousePos = new Vector3Int((int)Input.mousePosition.x, (int)Input.mousePosition.y, 0);
             Vector3Int playerPos = new Vector3Int((int)transform.position.x, (int)transform.position.y, 0);
 
-            // if(TileManager.instance.tileManager.IsInteractable(playerPos))
+            if(GameManager.instance.tileManager.IsInteractable(playerPos))
             {
                 Debug.Log("Interactable");
+                Instantiate(tilledTile, playerPos, Quaternion.identity);
             }
         }
     }
 
     // drops inventory item at player position with random offset
-    public void DropItem(Collectable item) {
+    public void DropItem(Item item) {
         Vector3 spawnLocation = transform.position;
 
         float randX = Random.Range(-1f, 1f);
@@ -38,10 +40,6 @@ public class Player : MonoBehaviour
         Vector3 spawnOffset = new Vector3(randX, randY, 0f).normalized;
 
         // instantiates item at player position with spawn offset
-        Collectable droppedItem = Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity); 
+        Item droppedItem = Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity); 
     }
-
-
-    // tileManager = GetComponent<TileManager>();
-
 }
