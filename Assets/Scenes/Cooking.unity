@@ -1243,8 +1243,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Slot to place Appliance
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
-  m_sharedMaterial: {fileID: -6458250399411307604, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1377,8 +1377,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Switch between Carrots and Appliances tabs
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
-  m_sharedMaterial: {fileID: -6458250399411307604, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1706,8 +1706,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Slots to place Carrots
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
-  m_sharedMaterial: {fileID: -6458250399411307604, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1991,8 +1991,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Appliance
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
-  m_sharedMaterial: {fileID: -6458250399411307604, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2513,8 +2513,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Carrot 2
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
-  m_sharedMaterial: {fileID: -6458250399411307604, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2957,7 +2957,7 @@ MonoBehaviour:
   m_text: Carrot [...]
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
-  m_sharedMaterial: {fileID: -6458250399411307604, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
+  m_sharedMaterial: {fileID: 3867067425481430038, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3165,8 +3165,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Carrots
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
-  m_sharedMaterial: {fileID: -6458250399411307604, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3299,8 +3299,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Carrot [...]
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
-  m_sharedMaterial: {fileID: -6458250399411307604, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3592,7 +3592,7 @@ MonoBehaviour:
   m_text: Cooking
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
-  m_sharedMaterial: {fileID: -6458250399411307604, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
+  m_sharedMaterial: {fileID: 3867067425481430038, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4228,8 +4228,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Exit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
-  m_sharedMaterial: {fileID: -6458250399411307604, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4708,7 +4708,7 @@ MonoBehaviour:
   m_text: 'Avaliable recipes:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
-  m_sharedMaterial: {fileID: -6458250399411307604, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
+  m_sharedMaterial: {fileID: 3867067425481430038, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4879,8 +4879,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: All of your collected Appliances/Carrots that are avaliable for cooking
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
-  m_sharedMaterial: {fileID: -6458250399411307604, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5238,8 +5238,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Carrot [...]
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
-  m_sharedMaterial: {fileID: -6458250399411307604, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5698,7 +5698,7 @@ MonoBehaviour:
   m_text: Appliances
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
-  m_sharedMaterial: {fileID: -6458250399411307604, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
+  m_sharedMaterial: {fileID: 3867067425481430038, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5831,8 +5831,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Cooking section
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
-  m_sharedMaterial: {fileID: -6458250399411307604, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6354,8 +6354,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Click green tick to use recipe
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
-  m_sharedMaterial: {fileID: -6458250399411307604, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6713,8 +6713,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Carrot 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
-  m_sharedMaterial: {fileID: -6458250399411307604, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8504,8 +8504,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Recipes you're able to use from the Carrots and Appliances placed
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
-  m_sharedMaterial: {fileID: -6458250399411307604, guid: a834251db98b342a38df7abdbfa13bdc, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
