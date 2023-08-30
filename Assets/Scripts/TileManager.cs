@@ -14,16 +14,11 @@ public class TileManager : MonoBehaviour
     {
         foreach(var position in Plots_InteractableMap.cellBounds.allPositionsWithin)
         {
-            TileBase tile = Plots_InteractableMap.GetTile(position);
-
-            if(tile != null && tile.name == "Interactable_Visible")
-            {
-                Plots_InteractableMap.SetTile(position, hiddenInteractableTile);
-            }
+            Plots_InteractableMap.SetTile(position, hiddenInteractableTile);
         }
     }
 
-    public bool IsInteractable(Vector3Int position)
+    /* public bool IsInteractable(Vector3Int position)
     {
         TileBase tile = Plots_InteractableMap.GetTile(position);
         if(tile != null)
@@ -31,12 +26,12 @@ public class TileManager : MonoBehaviour
             if(tile.name == "Interactable")
             {
                 return true;
-            } else {
+            }
+            else
+            {
                 return false;
             }
-        } else {
-            return false;
         }
-    } 
+    } */
 
 }
