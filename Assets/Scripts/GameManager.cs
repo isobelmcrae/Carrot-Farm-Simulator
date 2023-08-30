@@ -17,8 +17,10 @@ public class GameManager : MonoBehaviour
             instance = this;
         }
 
+        // ensures that this object is not destroyed when loading new scenes
         DontDestroyOnLoad(this.gameObject);
 
+        // gets the ItemManager component from this object
         itemManager = GetComponent<ItemManager>();
     }
 

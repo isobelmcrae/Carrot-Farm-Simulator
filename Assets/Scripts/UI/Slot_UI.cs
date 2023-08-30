@@ -9,8 +9,10 @@ public class Slot_UI : MonoBehaviour
     public Image itemIcon;
     public TextMeshProUGUI quantityText;
 
+    // sets the slot to the item in the player's inventory
     public void SetItem(Inventory.Slot slot)
     {
+        // checks if slot is not null then sets the item icon, sprite and quantity text
         if(slot != null)
         {
             itemIcon.sprite = slot.icon;
@@ -19,6 +21,7 @@ public class Slot_UI : MonoBehaviour
         }
     }
 
+    // sets the slot to empty by setting the item icon sprite to null and the item icon color to transparent, quantity text to empty string
     public void SetEmpty()
     {
         itemIcon.sprite = null;

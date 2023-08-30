@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     public Inventory inventory;
     public TileManager tileManager;
 
+    // creates inventory with 16 slots
     private void Awake()
     {
         inventory = new Inventory(16);
@@ -26,14 +27,17 @@ public class Player : MonoBehaviour
         }
     }
 
+    // drops inventory item at player position with random offset
     public void DropItem(Collectable item) {
         Vector3 spawnLocation = transform.position;
 
         float randX = Random.Range(-1f, 1f);
         float randY = Random.Range(-1f, 1f);
 
+        // creates a spawn offset vector with random x and y values
         Vector3 spawnOffset = new Vector3(randX, randY, 0f).normalized;
 
+        // instantiates item at player position with spawn offset
         Collectable droppedItem = Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity); 
     }
 

@@ -20,6 +20,7 @@ public class Inventory
             
         }
 
+        // checks if the slot can add an item
         public bool CanAddItem()
         {
             if(count < maxAllowed)
@@ -32,6 +33,7 @@ public class Inventory
             }
         }
 
+        // adds item to slot
         public void AddItem(Collectable item)
         {
             this.type = item.type;
@@ -39,6 +41,7 @@ public class Inventory
             count++;
         }
 
+        // removes item from slot
         public void RemoveItem()
         {
             if(count > 0)
@@ -55,8 +58,10 @@ public class Inventory
 
     }
 
+    // list of slots in inventory
     public List<Slot> slots = new List<Slot>();
 
+    // creates inventory with numSlots slots
     public Inventory(int numSlots)
     {
         for(int i = 0; i < numSlots; i++) 
@@ -67,10 +72,13 @@ public class Inventory
         
     }
 
+    // adds item to inventory
     public void Add(Collectable item) 
     {
+        
         foreach(Slot slot in slots)
         {
+            // checks if slot type is the same as item type and if the slot can add an item
             if(slot.type == item.type && slot.CanAddItem())
             {
                 slot.AddItem(item);
@@ -78,8 +86,10 @@ public class Inventory
             }
         }
 
+        // if no slot can add an item, add item to empty slot
         foreach(Slot slot in slots)
         {
+            // if the slot type is none, add item to slot
             if(slot.type == CollectableType.NONE)
             {
                 slot.AddItem(item);
