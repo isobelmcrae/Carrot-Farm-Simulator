@@ -13,6 +13,10 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movement;
     public Animator animator;
 
+    private float useTime = 0.4f;
+    private float useCD;
+    private bool isUsing = false;
+
     public InventoryManager inventoryManager;
 
     // variable to change sorting order of roof when player collides with door
@@ -21,14 +25,24 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        
     }
 
     // controls animations, fetches user input
     private void Update()
     {
-        // movement animations 
+        if(!isUsing)
+        {
+            // movement animations 
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
+        }
+        else
+        {
+            movement = Vector2.zero;
+        }
+        
 
         // sets animaton parameters (speed checks when player moving)
         animator.SetFloat("Horizontal", movement.x);
@@ -36,11 +50,37 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Speed", movement.sqrMagnitude);
 
 
-        if(Input.GetKeyDown(KeyCode.Mouse0)) {
-            if(inventoryManager.GetSelectedItem(false).name == "Hoe") {
+        if(Input.GetKeyDown(KeyCode.Mouse0) && !isUsing) 
+        {
+            UsingCD(); //triggers cooldown before player can input again
+            if(inventoryManager.GetSelectedItem(false).name == "Hoe") 
+            {
                 animator.Play("PlayerHoe");
+                
+            } 
+            else
+            {
+                return;
             }
         }
+
+
+        //timer for resetting isUsing
+        if (isUsing) 
+        {
+            useCD -= Time.deltaTime;
+            if (useCD <= 0) 
+            {
+                isUsing = false;
+            }
+        }
+
+    }
+
+    private void UsingCD()
+    {
+        isUsing = true;
+        useCD = useTime;
 
     }
     
@@ -66,9 +106,6 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
-
-    // uses the hoe if it is selected in the toolbar
-    
 
 }
 

@@ -68,7 +68,8 @@ public class InventoryManager : MonoBehaviour
     // gets currently selected item, and if use is true, removes one of it from the inventory
     public Item GetSelectedItem(bool use) {
         InventorySlot slot = inventorySlots[selectedSlot];
-        InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
+        if (selectedSlot != -1) {
+            InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
         if (itemInSlot != null) {
             Item item = itemInSlot.item;
             if (use == true)
@@ -82,6 +83,9 @@ public class InventoryManager : MonoBehaviour
                 }
             }
             return item;
-        } else return null;
+            } else return null;
+        }
+        return null;
+        
     }   
 }
