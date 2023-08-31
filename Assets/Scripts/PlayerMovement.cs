@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Tilemaps;
 using UnityEngine;
-using TMPro.Examples;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
