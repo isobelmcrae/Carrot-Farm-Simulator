@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     // variable to change sorting order of roof when player collides with door
     public bool enter = false;
+    
 
     private void Start()
     {
@@ -35,6 +36,11 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
 
+        if (Input.GetAxisRaw("Horizontal") == 1 || Input.GetAxisRaw("Horizontal") == -1 || Input.GetAxisRaw("Vertical") == 1 || Input.GetAxisRaw("Vertical") == -1)
+        {
+            animator.SetFloat("lastMoveX", Input.GetAxisRaw("Horizontal"));
+            animator.SetFloat("lastMoveY", Input.GetAxisRaw("Vertical"));
+        }
 
         if(Input.GetKeyDown(KeyCode.Mouse0)) {
             if(inventoryManager.GetSelectedItem(false).name == "Hoe") {
