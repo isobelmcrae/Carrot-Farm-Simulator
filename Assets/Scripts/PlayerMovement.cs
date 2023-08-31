@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Tilemaps;
 using UnityEngine;
+using TMPro.Examples;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movement;
     public Animator animator;
+
+    public InventoryManager inventoryManager;
 
     // variable to change sorting order of roof when player collides with door
     public bool enter = false;
@@ -31,6 +34,13 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
+
+
+        if(Input.GetKeyDown(KeyCode.Mouse0)) {
+            if(inventoryManager.GetSelectedItem(false).name == "Hoe") {
+                animator.Play("PlayerHoe");
+            }
+        }
 
     }
     
@@ -56,6 +66,9 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
+    // uses the hoe if it is selected in the toolbar
+    
 
 }
 
