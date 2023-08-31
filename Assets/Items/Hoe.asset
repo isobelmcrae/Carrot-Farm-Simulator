@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Hoe
   m_EditorClassIdentifier: 
   tile: {fileID: 0}
-  image: {fileID: 30038155, guid: 5f4355f2a31b6454687008d6226fd3da, type: 3}
+  image: {fileID: 1939397049, guid: 9cb2b371d93c642758f6e85d44e1bc8b, type: 3}
   type: 0
   actionType: 0
   range: {x: 5, y: 4}
