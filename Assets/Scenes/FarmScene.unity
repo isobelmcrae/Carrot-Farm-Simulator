@@ -9894,6 +9894,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 250
   animator: {fileID: 580219589}
+  farmingSpacePrefab: {fileID: 6195930472674786278, guid: 3de8e8014f8b84ff59766d745e5b1841, type: 3}
   inventoryManager: {fileID: 2101294268}
   enter: 0
 --- !u!50 &580219585
@@ -24303,7 +24304,7 @@ GameObject:
   - component: {fileID: 919408440}
   - component: {fileID: 919408439}
   m_Layer: 0
-  m_Name: Grid
+  m_Name: FarmingGrid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
