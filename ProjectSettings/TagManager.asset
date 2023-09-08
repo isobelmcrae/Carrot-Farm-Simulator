@@ -43,6 +43,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: UI
+  - name: Bush
     uniqueID: 544193069
+    locked: 0
+  - name: Grass
+    uniqueID: 1342700621
     locked: 0
