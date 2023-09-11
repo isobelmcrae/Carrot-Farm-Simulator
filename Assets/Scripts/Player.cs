@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine.Tilemaps;
 using UnityEngine;
 using TMPro;
-using TMPro.Examples;
 
 public class Player : MonoBehaviour
 {
@@ -17,11 +16,17 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movement;
     public Animator animator;
-    public GameObject farmingSpacePrefab;
 
-    private float useTime = 0.4f;
+    // tiles for farming
+    [SerializeField] private Tilemap interactableMap;
+    [SerializeField] private Tile hiddenInteractableTile;
+    [SerializeField] private Tile tilledTile;
+    [SerializeField] private Tile wateredTile;
+
+    // cooldown for using items
+    private float useTime = 0.1f;
     private float useCD;
-    private bool isUsing = false;
+    private bool isUsing = false;   
 
     public InventoryManager inventoryManager;
 
@@ -33,7 +38,27 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         cam = Camera.main;
         grid = GameObject.Find("FarmingGrid").GetComponent<Grid>();
+
+        foreach(var position in interactableMap.cellBounds.allPositionsWithin) {
+            TileBase tile = interactableMap.GetTile(position);
+            if (tile != null && tile.name == "Interactable_Visible") {
+                interactableMap.SetTile(position, hiddenInteractableTile);
+            }
+        }
         
+    }
+
+    public bool isInteractable(Vector3Int position) {
+        TileBase tile = interactableMap.GetTile(position);
+        if (tile != null) {
+            if (tile.name == "Interactable") {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
     }
 
     // controls animations, fetches user input
@@ -42,16 +67,12 @@ public class Player : MonoBehaviour
         if(!isUsing)
         {
             // movement animations 
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
-
-        }
-        else
-        {
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
+        } else {
             movement = Vector2.zero;
         }
         
-
         // sets animaton parameters (speed checks when player moving)
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
@@ -63,10 +84,11 @@ public class Player : MonoBehaviour
             animator.SetFloat("lastMoveY", Input.GetAxisRaw("Vertical"));
         }
 
-        if(Input.GetKeyDown(KeyCode.Mouse0) && !isUsing) 
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !isUsing) 
         {
-            UsingCD(); //triggers cooldown before player can input again
-            if(inventoryManager.GetSelectedItem(false).name == "Hoe" /* && tile is interactable */) 
+            UsingCD(); // triggers cooldown before player can input again
+            // farming 
+            if(inventoryManager.GetSelectedItem(false).name == "Hoe") 
             {
                 Vector3 point = new Vector3();
                 Vector3 pointPos = new Vector3();
@@ -77,34 +99,47 @@ public class Player : MonoBehaviour
                 point = cam.ScreenToWorldPoint(pointPos);
                 // converts world position to cell position on the grid
                 Vector3Int cellPosition = grid.WorldToCell(point);
-                if (Vector3.Distance(pointPos, cellPosition) > 20f) {
-                    // if the dictionary has no values, add the current cell position and instantiate a farming space
+                
+                if(isInteractable(cellPosition)) {
                     if(activeTiles.Count == 0) {
-                        activeTiles.Add(cellPosition, "tilled");
-                        Instantiate(farmingSpacePrefab, grid.GetCellCenterWorld(cellPosition), Quaternion.identity);
-                        // only plays animation if farming space is created
-                        animator.Play("PlayerHoe");
+                            activeTiles.Add(cellPosition, "tilled");
+                            interactableMap.SetTile(cellPosition, tilledTile);
+                            // only plays animation if farming space is created
+                            animator.Play("PlayerHoe");
                     } else {
                         // if the dictionary has values, check if the current cell position is already in the dictionary
                         if(!activeTiles.ContainsKey(cellPosition))  {
+
                             activeTiles.Add(cellPosition, "tilled");
-                            Instantiate(farmingSpacePrefab, grid.GetCellCenterWorld(cellPosition), Quaternion.identity);
+                            interactableMap.SetTile(cellPosition, tilledTile);
+
                             // only plays animation if farming space is created
                             animator.Play("PlayerHoe");
-                        } else {
-                            return;
                         }
                     }
                 }
-                
-            } 
-            else
+
+            } else if(inventoryManager.GetSelectedItem(false).name == "WateringCan" && !isUsing)
             {
-                return;
+                UsingCD(); // triggers cooldown before player can input again
+                Vector3 point = new Vector3();
+                Vector3 pointPos = new Vector3();
+                pointPos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane);
+
+                // converts mouse position to world position
+                point = cam.ScreenToWorldPoint(pointPos);
+                // converts world position to cell position on the grid
+                Vector3Int cellPosition = grid.WorldToCell(point);
+                TileBase tile = interactableMap.GetTile(cellPosition);
+
+                if (tile != null && tile.name == "tilledDirt" && activeTiles.ContainsKey(cellPosition)) {
+                    activeTiles[cellPosition] = "watered";
+                    interactableMap.SetTile(cellPosition, wateredTile);
+                }
+                
             }
         }
-
-
+        
         //timer for resetting isUsing
         if (isUsing) 
         {
