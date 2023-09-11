@@ -89,5 +89,5 @@ public class InventoryManager : MonoBehaviour
         
     }   
 
-    DontDestroyOnLoad(this.gameObject);
+    // DontDestroyOnLoad(this.gameObject);
 }
