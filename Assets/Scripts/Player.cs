@@ -38,7 +38,12 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         cam = Camera.main;
-        grid = GameObject.Find("FarmingGrid").GetComponent<Grid>();
+
+        if (SceneManager.GetActiveScene().name == "FarmScene") {
+            grid = GameObject.Find("FarmingGrid").GetComponent<Grid>();
+            interactableMap = GameObject.Find("FarmingGrid").GetChild(0).GetComponent<Tilemap>();
+        }
+        
 
         foreach(var position in interactableMap.cellBounds.allPositionsWithin) {
             TileBase tile = interactableMap.GetTile(position);
@@ -46,6 +51,8 @@ public class Player : MonoBehaviour
                 interactableMap.SetTile(position, hiddenInteractableTile);
             }
         }
+
+        inventoryManager = FindObjectOfType<InventoryManager>();
         
     }
 
@@ -89,7 +96,7 @@ public class Player : MonoBehaviour
         {
             UsingCD(); // triggers cooldown before player can input again
             // farming 
-            if(inventoryManager.GetSelectedItem(false).name == "Hoe") 
+            if(inventoryManager.GetSelectedItem(false).name == "Hoe") // if the item is a hoe, don't "use" the item but till the tile
             {
                 Vector3 point = new Vector3();
                 Vector3 pointPos = new Vector3();
@@ -120,7 +127,7 @@ public class Player : MonoBehaviour
                     }
                 }
 
-            } else if(inventoryManager.GetSelectedItem(false).name == "WateringCan")
+            } else if(inventoryManager.GetSelectedItem(false).name == "WateringCan") // if the item is a watering can, don't "use" the item but water the tile
             {
                 Vector3 point = new Vector3();
                 Vector3 pointPos = new Vector3();
@@ -132,11 +139,27 @@ public class Player : MonoBehaviour
                 Vector3Int cellPosition = grid.WorldToCell(point);
                 TileBase tile = interactableMap.GetTile(cellPosition);
 
-                if (tile != null && tile.name == "tilledDirt" && activeTiles.ContainsKey(cellPosition)) {
+                if (tile != null && tile.name == "tilledDirt" && activeTiles.ContainsKey(cellPosition)) { // if the tile is not a blank tile, and the tile name is tilledDirt, and the tile's cell position is in the dictionary
                     activeTiles[cellPosition] = "watered";
                     interactableMap.SetTile(cellPosition, wateredTile);
                 }
                 
+            } else if(inventoryManager.GetSelectedItem(true).name == "CarrotSeed") {
+
+                Vector3 point = new Vector3();
+                Vector3 pointPos = new Vector3();
+                pointPos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane);
+
+                // converts mouse position to world position
+                point = cam.ScreenToWorldPoint(pointPos);
+                // converts world position to cell position on the grid
+                Vector3Int cellPosition = grid.WorldToCell(point);
+                TileBase tile = interactableMap.GetTile(cellPosition);
+
+                if (tile != null && tile.name == "wateredDirt" && activeTiles.ContainsKey(cellPosition)) { // if the tile is not a blank tile, and the tile name is tilledDirt, and the tile's cell position is in the dictionary
+                    activeTiles[cellPosition] = "watered";
+                    interactableMap.SetTile(cellPosition, wateredTile);
+                }
             }
         }
         
@@ -179,6 +202,7 @@ public class Player : MonoBehaviour
                 enter = true;
                 GameObject.Find("House_Roof").GetComponent<TilemapRenderer>().sortingOrder = -1;
             }
+        // Josh's code for entering and exiting the vendor scene
         } else if (other.gameObject.CompareTag("vendorEntryPoint")) {
             SceneManager.LoadScene("VendorScene");
         } else if (other.gameObject.CompareTag("vendorExitPoint")) {

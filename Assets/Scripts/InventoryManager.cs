@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
+
+    
     public InventorySlot[] inventorySlots;
     public GameObject inventoryItemPrefab;
 
