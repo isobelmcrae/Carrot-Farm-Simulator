@@ -181,6 +181,8 @@ public class Player : MonoBehaviour
             }
         } else if (other.gameObject.CompareTag("vendorEntryPoint")) {
             SceneManager.LoadScene("VendorScene");
+        } else if (other.gameObject.CompareTag("vendorExitPoint")) {
+            SceneManager.LoadScene("FarmScene");
         }
     }
 
