@@ -38,12 +38,7 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         cam = Camera.main;
-
-        if (SceneManager.GetActiveScene().name == "FarmScene") {
-            grid = GameObject.Find("FarmingGrid").GetComponent<Grid>();
-            interactableMap = GameObject.Find("FarmingGrid").GetChild(0).GetComponent<Tilemap>();
-        }
-        
+        grid = GameObject.Find("FarmingGrid").GetComponent<Grid>();
 
         foreach(var position in interactableMap.cellBounds.allPositionsWithin) {
             TileBase tile = interactableMap.GetTile(position);
@@ -157,7 +152,7 @@ public class Player : MonoBehaviour
                 TileBase tile = interactableMap.GetTile(cellPosition);
 
                 if (tile != null && tile.name == "wateredDirt" && activeTiles.ContainsKey(cellPosition)) { // if the tile is not a blank tile, and the tile name is tilledDirt, and the tile's cell position is in the dictionary
-                    activeTiles[cellPosition] = "watered";
+                    activeTiles[cellPosition] = "carrot1_stage1";
                     interactableMap.SetTile(cellPosition, wateredTile);
                 }
             }
