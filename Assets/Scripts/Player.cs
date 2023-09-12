@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.Tilemaps;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -119,9 +120,8 @@ public class Player : MonoBehaviour
                     }
                 }
 
-            } else if(inventoryManager.GetSelectedItem(false).name == "WateringCan" && !isUsing)
+            } else if(inventoryManager.GetSelectedItem(false).name == "WateringCan")
             {
-                UsingCD(); // triggers cooldown before player can input again
                 Vector3 point = new Vector3();
                 Vector3 pointPos = new Vector3();
                 pointPos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane);
@@ -179,6 +179,8 @@ public class Player : MonoBehaviour
                 enter = true;
                 GameObject.Find("House_Roof").GetComponent<TilemapRenderer>().sortingOrder = -1;
             }
+        } else if (other.gameObject.CompareTag("vendorEntryPoint")) {
+            SceneManager.LoadScene("VendorScene");
         }
     }
 
