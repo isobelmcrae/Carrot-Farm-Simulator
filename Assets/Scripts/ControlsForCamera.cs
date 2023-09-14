@@ -10,20 +10,16 @@ public class CameraController : MonoBehaviour
     public Vector2 maxPosition;
 
     // changes camera position to target position (player)
-    void Update()
+    void LateUpdate()
     {
-        if(transform.position != target.position)
-        {
-            Vector3 targetPosition = new Vector3(target.transform.position.x, target.transform.position.y, transform.position.z);
-
-            targetPosition.x = Mathf.Clamp(target.position.x, minPosition.x, maxPosition.x);
-            targetPosition.y = Mathf.Clamp(target.position.y, minPosition.y, maxPosition.y);
-
-            //transform.position = Vector3.Lerp(transform.position, target.position, smoothing);
-
-            transform.position = new Vector3(Mathf.Lerp(transform.position.x, targetPosition.x, smoothing), Mathf.Lerp(transform.position.y, targetPosition.y, smoothing), -10);
-        }
         
+        
+        Vector3 targetPosition = new Vector3(target.transform.position.x, target.transform.position.y, -10f);
+
+        targetPosition.x = Mathf.Clamp(target.position.x, minPosition.x, maxPosition.x);
+        targetPosition.y = Mathf.Clamp(target.position.y, minPosition.y, maxPosition.y);
+
+        transform.position = Vector3.Lerp(transform.position, targetPosition, smoothing);
     }
 
 }
