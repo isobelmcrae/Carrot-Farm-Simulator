@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Door
   - Roof
+  - vendorEntryPoint
+  - vendorExitPoint
   layers:
   - Default
   - TransparentFX
