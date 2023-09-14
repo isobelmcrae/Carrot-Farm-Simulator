@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Tile wateredTile;
 
     // cooldown for using items
-    private float useTime = 0.1f;
+    private float useTime = 0.5f;
     private float useCD;
     private bool isUsing = false;   
 
@@ -87,75 +87,66 @@ public class Player : MonoBehaviour
             animator.SetFloat("lastMoveY", Input.GetAxisRaw("Vertical"));
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) && !isUsing) 
-        {
-            UsingCD(); // triggers cooldown before player can input again
-            // farming 
-            if(inventoryManager.GetSelectedItem(false).name == "Hoe") // if the item is a hoe, don't "use" the item but till the tile
-            {
-                Vector3 point = new Vector3();
-                Vector3 pointPos = new Vector3();
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !isUsing) {
 
-                pointPos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane);
+            UsingCD();
 
-                // converts mouse position to world position
-                point = cam.ScreenToWorldPoint(pointPos);
-                // converts world position to cell position on the grid
-                Vector3Int cellPosition = grid.WorldToCell(point);
-                
-                if(isInteractable(cellPosition)) {
-                    if(activeTiles.Count == 0) {
+            Vector3 point = new Vector3();
+            Vector3 pointPos = new Vector3();
+
+            pointPos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane);
+
+            // converts mouse position to world position
+            point = cam.ScreenToWorldPoint(pointPos);
+            // converts world position to cell position on the grid
+            Vector3Int cellPosition = grid.WorldToCell(point);
+
+            TileBase tile = interactableMap.GetTile(cellPosition);
+
+            switch(inventoryManager.GetSelectedItem(false).name) {
+                case "Hoe":
+                    if(isInteractable(cellPosition)) {
+                        if(activeTiles.Count == 0) {
                             activeTiles.Add(cellPosition, "tilled");
                             interactableMap.SetTile(cellPosition, tilledTile);
                             // only plays animation if farming space is created
                             animator.Play("PlayerHoe");
-                    } else {
-                        // if the dictionary has values, check if the current cell position is already in the dictionary
-                        if(!activeTiles.ContainsKey(cellPosition))  {
+                        } else {
+                            // if the dictionary has values, check if the current cell position is already in the dictionary
+                            if(!activeTiles.ContainsKey(cellPosition))  {
+                            
+                                activeTiles.Add(cellPosition, "tilled");
+                                interactableMap.SetTile(cellPosition, tilledTile);
 
-                            activeTiles.Add(cellPosition, "tilled");
-                            interactableMap.SetTile(cellPosition, tilledTile);
-
-                            // only plays animation if farming space is created
-                            animator.Play("PlayerHoe");
+                                // only plays animation if farming space is created
+                                animator.Play("PlayerHoe");
+                            }
                         }
                     }
-                }
+                    break;
 
-            } else if(inventoryManager.GetSelectedItem(false).name == "WateringCan") // if the item is a watering can, don't "use" the item but water the tile
-            {
-                Vector3 point = new Vector3();
-                Vector3 pointPos = new Vector3();
-                pointPos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane);
+                case "WateringCan":
 
-                // converts mouse position to world position
-                point = cam.ScreenToWorldPoint(pointPos);
-                // converts world position to cell position on the grid
-                Vector3Int cellPosition = grid.WorldToCell(point);
-                TileBase tile = interactableMap.GetTile(cellPosition);
+                    if (tile != null && tile.name == "tilledDirt" && activeTiles.ContainsKey(cellPosition)) { // if the tile is not a blank tile, and the tile name is tilledDirt, and the tile's cell position is in the dictionary
+                        activeTiles[cellPosition] = "watered";
+                        interactableMap.SetTile(cellPosition, wateredTile);
+                        animator.Play("Player_WateringCan");
+                    } 
 
-                if (tile != null && tile.name == "tilledDirt" && activeTiles.ContainsKey(cellPosition)) { // if the tile is not a blank tile, and the tile name is tilledDirt, and the tile's cell position is in the dictionary
-                    activeTiles[cellPosition] = "watered";
-                    interactableMap.SetTile(cellPosition, wateredTile);
-                }
+                    break;
                 
-            } else if(inventoryManager.GetSelectedItem(true).name == "CarrotSeed") {
+                case "CarrotSeed":
 
-                Vector3 point = new Vector3();
-                Vector3 pointPos = new Vector3();
-                pointPos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane);
+                    if (tile != null && tile.name == "wateredDirt" && activeTiles.ContainsKey(cellPosition)) { // if the tile is not a blank tile, and the tile name is wateredDirt, and the tile's cell position is in the dictionary
+                        activeTiles[cellPosition] = "carrot1_stage1";
+                        interactableMap.SetTile(cellPosition, wateredTile);
+                        inventoryManager.GetSelectedItem(true);
+                    }
 
-                // converts mouse position to world position
-                point = cam.ScreenToWorldPoint(pointPos);
-                // converts world position to cell position on the grid
-                Vector3Int cellPosition = grid.WorldToCell(point);
-                TileBase tile = interactableMap.GetTile(cellPosition);
+                    break;
 
-                if (tile != null && tile.name == "wateredDirt" && activeTiles.ContainsKey(cellPosition)) { // if the tile is not a blank tile, and the tile name is tilledDirt, and the tile's cell position is in the dictionary
-                    activeTiles[cellPosition] = "carrot1_stage1";
-                    interactableMap.SetTile(cellPosition, wateredTile);
-                }
             }
+
         }
         
         //timer for resetting isUsing
@@ -168,7 +159,7 @@ public class Player : MonoBehaviour
             }
         }
 
-    }
+    } 
 
     private void UsingCD()
     {
