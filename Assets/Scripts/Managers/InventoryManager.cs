@@ -12,10 +12,6 @@ public class InventoryManager : MonoBehaviour
     // default selected slot is -1 (none as there is no 0th slot)
     int selectedSlot = -1;
 
-    void Awake() {
-        DontDestroyOnLoad(this.gameObject);
-    }
-
     // changes the selected slot to the given value (0-7)
     void ChangeSelectedSlot(int newValue) {
         if (selectedSlot >= 0) {

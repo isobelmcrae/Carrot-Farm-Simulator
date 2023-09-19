@@ -30,7 +30,6 @@ public class Player : MonoBehaviour
     private bool isUsing = false;   
 
     public InventoryManager inventoryManager;
-    public farmingManager FarmingManager;
 
     // variable to change sorting order of roof when player collides with door
     public bool enter = false;
@@ -68,11 +67,7 @@ public class Player : MonoBehaviour
     // controls animations, fetches user input
     private void Update()
     {
-        // movement animations 
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
-        
-        if(!isUsing())
+        if(!isUsing)
         {
             // movement animations 
             movement.x = Input.GetAxisRaw("Horizontal");
@@ -132,7 +127,7 @@ public class Player : MonoBehaviour
 
                 case "WateringCan":
 
-                    if (tile != null && tile.name == "tilledDirt" && activeTiles.ContainsKey(cellPosition)) { // if the tile is not a blank tile, and the tile name is tilledDirt, and the tile's cell position is in the dictionary
+                    if (tile != null && tile.name == "carrotFarmingTiles_0" && activeTiles.ContainsKey(cellPosition)) { // if the tile is not a blank tile, and the tile name is tilledDirt, and the tile's cell position is in the dictionary
                         activeTiles[cellPosition] = "watered";
                         interactableMap.SetTile(cellPosition, wateredTile);
                         animator.Play("Player_WateringCan");
@@ -142,11 +137,9 @@ public class Player : MonoBehaviour
                 
                 case "CarrotSeed":
 
-                    if (tile != null && tile.name == "wateredDirt" && activeTiles.ContainsKey(cellPosition)) { // if the tile is not a blank tile, and the tile name is wateredDirt, and the tile's cell position is in the dictionary
+                    if (tile != null && tile.name == "carrotFarmingTiles_1" && activeTiles.ContainsKey(cellPosition)) { // if the tile is not a blank tile, and the tile name is wateredDirt, and the tile's cell position is in the dictionary
                         activeTiles[cellPosition] = "carrot1_stage1";
                         interactableMap.SetTile(cellPosition, wateredTile);
-
-                        // uses the item only if it is actually planted
                         inventoryManager.GetSelectedItem(true);
                     }
 
@@ -164,7 +157,7 @@ public class Player : MonoBehaviour
             {
                 isUsing = false;
             }
-        } 
+        }
 
     } 
 
@@ -173,7 +166,7 @@ public class Player : MonoBehaviour
         isUsing = true;
         useCD = useTime;
 
-    } 
+    }
     
     // moves player using input from Update()
     private void FixedUpdate()
@@ -195,14 +188,12 @@ public class Player : MonoBehaviour
                 enter = true;
                 GameObject.Find("House_Roof").GetComponent<TilemapRenderer>().sortingOrder = -1;
             }
-
-        /* Josh's code for entering and exiting the vendor scene
+        // Josh's code for entering and exiting the vendor scene
         } else if (other.gameObject.CompareTag("vendorEntryPoint")) {
             SceneManager.LoadScene("VendorScene");
         } else if (other.gameObject.CompareTag("vendorExitPoint")) {
-            SceneManager.LoadScene("FarmScene"); */
-        } 
-    } 
+            SceneManager.LoadScene("FarmScene");
+        }
+    }
 
 }
-
