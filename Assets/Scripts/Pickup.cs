@@ -14,7 +14,6 @@ public class Pickup : MonoBehaviour
         if (other.CompareTag("Player")) {
             PickupManager collectable = GetComponentInParent<PickupManager>();
             collectable.PickupItem(id);
-            
             Destroy(this.gameObject);
         } 
     }
