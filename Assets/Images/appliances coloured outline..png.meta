@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 11007795809d543068b5d27b2fb2dd36
+guid: bb51327db1e65487c8535a6623499a83
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: appliances_0
+      name: appliances coloured outline._0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ec5f49bc9d32450db1fd465b5c6dcf7
-      internalID: -593997861
+      spriteID: 9b19fab1b03dd4d628300e78ddfcc0a9
+      internalID: -1232152487
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: appliances_1
+      name: appliances coloured outline._1
       rect:
         serializedVersion: 2
         x: 16
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02d5f3a71c97145959946662b598de9c
-      internalID: 433946051
+      spriteID: b523aa98a8a004117a0a0092d599ac97
+      internalID: 1033356131
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: appliances_2
+      name: appliances coloured outline._2
       rect:
         serializedVersion: 2
         x: 32
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06afaf228a5fa413b803cd7b8fbf6276
-      internalID: -2116087873
+      spriteID: 6300c0d09da39400a9816c44baff0db8
+      internalID: 2095140998
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: appliances_3
+      name: appliances coloured outline._3
       rect:
         serializedVersion: 2
         x: 48
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01932e6c584c44e45a71e245dd5e7ca6
-      internalID: -2055519431
+      spriteID: 8c0c6892bc8b3478eb7b6e1c405ee122
+      internalID: 317714145
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: appliances_4
+      name: appliances coloured outline._4
       rect:
         serializedVersion: 2
         x: 64
@@ -208,8 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09d871222c176464eb1ca0ed3afa885e
-      internalID: -287180441
+      spriteID: 2ceca89da23994501950a8c919b65dfe
+      internalID: -1589135812
       vertices: []
       indices: 
       edges: []
@@ -225,11 +225,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      appliances_0: -593997861
-      appliances_1: 433946051
-      appliances_2: -2116087873
-      appliances_3: -2055519431
-      appliances_4: -287180441
+      appliances coloured outline._0: -1232152487
+      appliances coloured outline._1: 1033356131
+      appliances coloured outline._2: 2095140998
+      appliances coloured outline._3: 317714145
+      appliances coloured outline._4: -1589135812
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
