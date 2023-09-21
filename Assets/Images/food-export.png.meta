@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 67ae88e476abb4ffabe095d8102cb95a
+guid: a3957cb9f66694b76af35573bcac153b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ALL TINY CARROTS_0
+      name: food-export_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65e703dfacc5947f988796492b56f73a
-      internalID: -1982965349
+      spriteID: 92d797ea7e38c4f469c5f7d9d02e91be
+      internalID: 743286689
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ALL TINY CARROTS_1
+      name: food-export_1
       rect:
         serializedVersion: 2
         x: 16
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c786c6aef23214cce932e815cf14e781
-      internalID: -845130695
+      spriteID: 990b77c8d25cf4038bcf7f9981f9db6d
+      internalID: 282348072
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ALL TINY CARROTS_2
+      name: food-export_2
       rect:
         serializedVersion: 2
         x: 32
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81112f52909de4e9ca02bed3c36108b8
-      internalID: 946284961
+      spriteID: 841cb58eda37d4d3087b934c3a9bbe81
+      internalID: -177355666
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ALL TINY CARROTS_3
+      name: food-export_3
       rect:
         serializedVersion: 2
         x: 48
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4913356f2ca5049f9b2095f059bcdf97
-      internalID: -1869502242
+      spriteID: 64792eac9bf374e1aaa71df0f53bbf2f
+      internalID: 1647174834
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ALL TINY CARROTS_4
+      name: food-export_4
       rect:
         serializedVersion: 2
         x: 64
@@ -208,71 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20c52a9d572784bd0b0640e1b1a646c6
-      internalID: -1285828884
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ALL TINY CARROTS_5
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9e23097c6e6964d47bb56a39deee090a
-      internalID: -451521459
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ALL TINY CARROTS_6
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bf82e2ac2db214d979da129d564cb02a
-      internalID: 1222843107
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ALL TINY CARROTS_7
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 528d57b9eb4194d5392ea584a1e25c6d
-      internalID: -155388582
+      spriteID: 86c55247268be44a58a14c22eb5f7ffe
+      internalID: -1474625723
       vertices: []
       indices: 
       edges: []
@@ -288,14 +225,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ALL TINY CARROTS_0: -1982965349
-      ALL TINY CARROTS_1: -845130695
-      ALL TINY CARROTS_2: 946284961
-      ALL TINY CARROTS_3: -1869502242
-      ALL TINY CARROTS_4: -1285828884
-      ALL TINY CARROTS_5: -451521459
-      ALL TINY CARROTS_6: 1222843107
-      ALL TINY CARROTS_7: -155388582
+      food-export_0: 743286689
+      food-export_1: 282348072
+      food-export_2: -177355666
+      food-export_3: 1647174834
+      food-export_4: -1474625723
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
