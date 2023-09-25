@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -9,6 +10,12 @@ public class InventoryManager : MonoBehaviour
     public InventorySlot[] inventorySlots;
     public GameObject inventoryItemPrefab;
 
+    public TMP_Text inventoryText;
+    public Animator animator;
+
+    public void Awake() {
+        animator = inventoryText.GetComponent<Animator>();
+    }
     // default selected slot is -1 (none as there is no 0th slot)
     int selectedSlot = -1;
 
@@ -29,6 +36,7 @@ public class InventoryManager : MonoBehaviour
             if (isNumber && number > 0 && number < 8)
             {
                 ChangeSelectedSlot(number - 1);
+                inventoryText.text = GetSelectedItem(false).name.ToLower();
             }
         }
     }

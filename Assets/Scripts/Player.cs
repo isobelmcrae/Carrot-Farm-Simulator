@@ -125,7 +125,7 @@ public class Player : MonoBehaviour
                     }
                     break;
 
-                case "WateringCan":
+                case "Watering Can":
 
                     if (tile != null && tile.name == "carrotFarmingTiles_0" && activeTiles.ContainsKey(cellPosition)) { // if the tile is not a blank tile, and the tile name is tilledDirt, and the tile's cell position is in the dictionary
                         activeTiles[cellPosition] = "watered";
@@ -135,7 +135,7 @@ public class Player : MonoBehaviour
 
                     break;
                 
-                case "CarrotSeed":
+                case "Carrot Seed":
 
                     if (tile != null && tile.name == "carrotFarmingTiles_1" && activeTiles.ContainsKey(cellPosition)) { // if the tile is not a blank tile, and the tile name is wateredDirt, and the tile's cell position is in the dictionary
                         activeTiles[cellPosition] = "carrot1_stage1";

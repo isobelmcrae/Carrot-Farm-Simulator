@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89cd122a4e96e414d987ed9433bd2edf, type: 3}
-  m_Name: MuscleCarrotSeed
+  m_Name: Golden Carrot Seeds
   m_EditorClassIdentifier: 
   tile: {fileID: 0}
-  image: {fileID: -1150929877, guid: 561b5366629344f43a4f2f83d523596e, type: 3}
-  type: 1
+  image: {fileID: 799630872, guid: 561b5366629344f43a4f2f83d523596e, type: 3}
+  type: 0
   actionType: 0
   range: {x: 5, y: 4}
   stackable: 1

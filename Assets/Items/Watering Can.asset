@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89cd122a4e96e414d987ed9433bd2edf, type: 3}
-  m_Name: PrincessCarrotSeed
+  m_Name: Watering Can
   m_EditorClassIdentifier: 
   tile: {fileID: 0}
-  image: {fileID: 409524014, guid: 561b5366629344f43a4f2f83d523596e, type: 3}
-  type: 1
-  actionType: 0
+  image: {fileID: -373377388, guid: 5f4355f2a31b6454687008d6226fd3da, type: 3}
+  type: 0
+  actionType: 1
   range: {x: 5, y: 4}
-  stackable: 1
+  stackable: 0
