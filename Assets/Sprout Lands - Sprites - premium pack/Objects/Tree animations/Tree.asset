@@ -12,9 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
   m_Name: Tree
   m_EditorClassIdentifier: 
-  m_AnimatedSprites: []
-  m_MinSpeed: 1
-  m_MaxSpeed: 1
+  m_AnimatedSprites:
+  - {fileID: 1892266333, guid: f89f5a3e7779e4ac4b4e5e1fa9bb91ea, type: 3}
+  - {fileID: -1366485477, guid: f89f5a3e7779e4ac4b4e5e1fa9bb91ea, type: 3}
+  - {fileID: 1995234878, guid: f89f5a3e7779e4ac4b4e5e1fa9bb91ea, type: 3}
+  - {fileID: 1182534650, guid: f89f5a3e7779e4ac4b4e5e1fa9bb91ea, type: 3}
+  - {fileID: 710579762, guid: f89f5a3e7779e4ac4b4e5e1fa9bb91ea, type: 3}
+  - {fileID: -619051496, guid: f89f5a3e7779e4ac4b4e5e1fa9bb91ea, type: 3}
+  - {fileID: -881895847, guid: f89f5a3e7779e4ac4b4e5e1fa9bb91ea, type: 3}
+  - {fileID: 1307217967, guid: f89f5a3e7779e4ac4b4e5e1fa9bb91ea, type: 3}
+  - {fileID: -70822765, guid: f89f5a3e7779e4ac4b4e5e1fa9bb91ea, type: 3}
+  - {fileID: 1013050284, guid: f89f5a3e7779e4ac4b4e5e1fa9bb91ea, type: 3}
+  - {fileID: -1029374086, guid: f89f5a3e7779e4ac4b4e5e1fa9bb91ea, type: 3}
+  - {fileID: 1660323800, guid: f89f5a3e7779e4ac4b4e5e1fa9bb91ea, type: 3}
+  - {fileID: 1718944040, guid: f89f5a3e7779e4ac4b4e5e1fa9bb91ea, type: 3}
+  - {fileID: 886719863, guid: f89f5a3e7779e4ac4b4e5e1fa9bb91ea, type: 3}
+  - {fileID: -341940679, guid: f89f5a3e7779e4ac4b4e5e1fa9bb91ea, type: 3}
+  - {fileID: 1146819093, guid: f89f5a3e7779e4ac4b4e5e1fa9bb91ea, type: 3}
+  - {fileID: 166294131, guid: f89f5a3e7779e4ac4b4e5e1fa9bb91ea, type: 3}
+  - {fileID: 131906413, guid: f89f5a3e7779e4ac4b4e5e1fa9bb91ea, type: 3}
+  - {fileID: -302747253, guid: f89f5a3e7779e4ac4b4e5e1fa9bb91ea, type: 3}
+  m_MinSpeed: 3
+  m_MaxSpeed: 3
   m_AnimationStartTime: 0
   m_AnimationStartFrame: 0
   m_TileColliderType: 0
