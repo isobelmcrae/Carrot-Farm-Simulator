@@ -89,7 +89,7 @@ public class Player : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.I)) {
-            inventoryWindow.SetActive(false);
+            inventoryWindow.SetActive(!inventoryWindow.activeSelf);
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse0) && !isUsing) {
