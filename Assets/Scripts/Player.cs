@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movement;
     public Animator animator;
+    public GameObject inventoryWindow;
 
     // tiles for farming
     [SerializeField] private Tilemap interactableMap;
@@ -85,6 +86,10 @@ public class Player : MonoBehaviour
         {
             animator.SetFloat("lastMoveX", Input.GetAxisRaw("Horizontal"));
             animator.SetFloat("lastMoveY", Input.GetAxisRaw("Vertical"));
+        }
+
+        if (Input.GetKeyDown(KeyCode.I)) {
+            inventoryWindow.SetActive(false);
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse0) && !isUsing) {
