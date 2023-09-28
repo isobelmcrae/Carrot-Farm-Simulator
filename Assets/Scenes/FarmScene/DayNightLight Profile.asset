@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
-  m_Name: funkyEffect Profile
+  m_Name: DayNightLight Profile
   m_EditorClassIdentifier: 
   components:
-  - {fileID: 8952901755323907817}
---- !u!114 &8952901755323907817
+  - {fileID: 1773361030657569114}
+--- !u!114 &1773361030657569114
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -28,8 +28,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   postExposure:
-    m_OverrideState: 0
-    m_Value: -2.73
+    m_OverrideState: 1
+    m_Value: -4.5
   contrast:
     m_OverrideState: 0
     m_Value: 0
@@ -40,5 +40,5 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   saturation:
-    m_OverrideState: 1
-    m_Value: 25
+    m_OverrideState: 0
+    m_Value: 0
