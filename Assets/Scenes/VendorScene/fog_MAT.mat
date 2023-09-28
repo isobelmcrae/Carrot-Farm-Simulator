@@ -78,6 +78,6 @@ Material:
     - _fogSize2: 35.4
     - _fogSpeed2: 0.001
     m_Colors:
-    - _fogColour: {r: 1, g: 1, b: 1, a: 0.68235296}
+    - _fogColour: {r: 1, g: 1, b: 1, a: 1}
     - _fogSpeed: {r: 0.0001, g: 0.1, b: 0, a: 0}
   m_BuildTextureStacks: []

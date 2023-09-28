@@ -16,7 +16,7 @@ TagManager:
   - Water
   - UI
   - 
-  - 
+  - Player
   - 
   - 
   - 
@@ -50,4 +50,7 @@ TagManager:
     locked: 0
   - name: Grass
     uniqueID: 1342700621
+    locked: 0
+  - name: Player
+    uniqueID: 1443715521
     locked: 0
