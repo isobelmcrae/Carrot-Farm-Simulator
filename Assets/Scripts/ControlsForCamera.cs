@@ -12,8 +12,6 @@ public class CameraController : MonoBehaviour
     // changes camera position to target position (player)
     void LateUpdate()
     {
-        
-        
         Vector3 targetPosition = new Vector3(target.transform.position.x, target.transform.position.y, -10f);
 
         targetPosition.x = Mathf.Clamp(target.position.x, minPosition.x, maxPosition.x);
