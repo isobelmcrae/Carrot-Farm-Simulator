@@ -16,8 +16,8 @@ public class InventoryManager : MonoBehaviour
     public void Awake() {
         animator = inventoryText.GetComponent<Animator>();
     }
-    // default selected slot is -1 (none as there is no 0th slot)
-    int selectedSlot = -1;
+    // default selected slot is 0
+    int selectedSlot = 0;
 
     // changes the selected slot to the given value (0-7)
     void ChangeSelectedSlot(int newValue) {

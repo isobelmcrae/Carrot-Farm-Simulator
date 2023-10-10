@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         cam = Camera.main;
-        grid = GameObject.Find("FarmingGrid").GetComponent<Grid>();
+        grid = GameObject.Find("FarmingSpace").GetComponent<Grid>();
 
         foreach(var position in interactableMap.cellBounds.allPositionsWithin) {
             TileBase tile = interactableMap.GetTile(position);
@@ -92,7 +92,7 @@ public class Player : MonoBehaviour
             inventoryWindow.SetActive(!inventoryWindow.activeSelf);
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) && !isUsing) {
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !isUsing && inventoryManager.GetSelectedItem(false) != null) {
 
             UsingCD();
 
@@ -109,6 +109,11 @@ public class Player : MonoBehaviour
             TileBase tile = interactableMap.GetTile(cellPosition);
 
             switch(inventoryManager.GetSelectedItem(false).name) {
+                
+                // check for null value
+                case null:
+                    break;
+
                 case "Hoe":
                     if(isInteractable(cellPosition)) {
                         if(activeTiles.Count == 0) {
@@ -184,21 +189,32 @@ public class Player : MonoBehaviour
     // uses 'enter' variable to determine whether the player is inside the house, and changes the sorting order of the roof accordingly
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Door"))
-        {
-            if (enter == true) {
-                enter = false;
-                GameObject.Find("House_Roof").GetComponent<TilemapRenderer>().sortingOrder = 6;
-            } else {
-                enter = true;
-                GameObject.Find("House_Roof").GetComponent<TilemapRenderer>().sortingOrder = -1;
-            }
-        // Josh's code for entering and exiting the vendor scene
-        } else if (other.gameObject.CompareTag("vendorEntryPoint")) {
-            SceneManager.LoadScene("VendorScene");
-        } else if (other.gameObject.CompareTag("vendorExitPoint")) {
-            SceneManager.LoadScene("FarmScene");
+        switch(other.gameObject.tag) {
+            case "Door":
+                if (enter == true) {
+                    enter = false;
+                    GameObject.Find("Roof").GetComponent<TilemapRenderer>().sortingOrder = 6;
+                } else {
+                    enter = true;
+                    GameObject.Find("Roof").GetComponent<TilemapRenderer>().sortingOrder = -1;
+                }
+                break;
+            
+            // Josh's code for entering and exiting the vendor scene
+            case "vendorEntryPoint":
+                SceneManager.LoadScene("VendorScene");
+                break;
+
+            case "vendorExitPoint":
+                SceneManager.LoadScene("FarmScene");
+                break;
+
+            // not implemented yet
+            case "Bed":
+                break;
+
         }
+         
     }
 
 }
