@@ -70,6 +70,8 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# other
 Assets/Sprout Lands - Sprites - premium pack/read_me.txt
 Assets/Fonts/Candy Beans SDF 1.asset
 .DS_Store
