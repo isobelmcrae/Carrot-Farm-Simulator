@@ -38,6 +38,9 @@ public class Player : MonoBehaviour
     private float useCD;
     private bool isUsing = false;   
 
+    // menu
+    private bool inMenu = false;
+
     public InventoryManager inventoryManager;
     public DayNightLighting dayNightTime;
 
@@ -74,11 +77,14 @@ public class Player : MonoBehaviour
             return false;
         }
     }
-
+    
+    public void ChangeMenuState() {
+        inMenu = !inMenu;
+    }
     // controls animations, fetches user input
     private void Update()
     {
-        if(!isUsing)
+        if(!isUsing && !inMenu)
         {
             // movement animations 
             movement.x = Input.GetAxisRaw("Horizontal");
@@ -102,7 +108,7 @@ public class Player : MonoBehaviour
             inventoryWindow.SetActive(!inventoryWindow.activeSelf);
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) && !isUsing && inventoryManager.GetSelectedItem(false) != null) {
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !isUsing && inventoryManager.GetSelectedItem(false) != null && !inMenu) {
 
             UsingCD();
 
@@ -243,6 +249,7 @@ public class Player : MonoBehaviour
             // not implemented yet
             case "Bed":
                 sleepMenu.SetActive(true);
+                inMenu = true;
                 break;
 
         }
