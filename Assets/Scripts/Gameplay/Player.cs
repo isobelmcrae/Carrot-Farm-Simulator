@@ -11,19 +11,27 @@ public class Player : MonoBehaviour
     public float moveSpeed;
 
     // dictionary for current active tiles
-    Dictionary<Vector3Int, string> activeTiles = new Dictionary<Vector3Int, string>();
+    Dictionary<Vector3Int, int> activeTiles = new Dictionary<Vector3Int, int>();
     private Grid grid;
     private Camera cam;
     private Rigidbody2D rb;
     private Vector2 movement;
     public Animator animator;
     public GameObject inventoryWindow;
+    public GameObject dayNightLighting;
+    public GameObject sleepMenu;
+
 
     // tiles for farming
     [SerializeField] private Tilemap interactableMap;
     [SerializeField] private Tile hiddenInteractableTile;
     [SerializeField] private Tile tilledTile;
     [SerializeField] private Tile wateredTile;
+    [SerializeField] private Tile stage1GrowTile;
+    [SerializeField] private Tile stage2GrowTile;
+    [SerializeField] private Tile stage3GrowTile;
+    [SerializeField] private Tile stage4GrowTile;
+
 
     // cooldown for using items
     private float useTime = 0.5f;
@@ -31,6 +39,7 @@ public class Player : MonoBehaviour
     private bool isUsing = false;   
 
     public InventoryManager inventoryManager;
+    public DayNightLighting dayNightTime;
 
     // variable to change sorting order of roof when player collides with door
     public bool enter = false;
@@ -48,6 +57,7 @@ public class Player : MonoBehaviour
             }
         }
 
+        dayNightTime = dayNightLighting.GetComponent<DayNightLighting>();
         inventoryManager = FindObjectOfType<InventoryManager>();
         
     }
@@ -107,7 +117,6 @@ public class Player : MonoBehaviour
             Vector3Int cellPosition = grid.WorldToCell(point);
 
             TileBase tile = interactableMap.GetTile(cellPosition);
-
             switch(inventoryManager.GetSelectedItem(false).name) {
                 
                 // check for null value
@@ -117,7 +126,7 @@ public class Player : MonoBehaviour
                 case "Hoe":
                     if(isInteractable(cellPosition)) {
                         if(activeTiles.Count == 0) {
-                            activeTiles.Add(cellPosition, "tilled");
+                            activeTiles.Add(cellPosition, 1);
                             interactableMap.SetTile(cellPosition, tilledTile);
                             // only plays animation if farming space is created
                             animator.Play("PlayerHoe");
@@ -125,7 +134,7 @@ public class Player : MonoBehaviour
                             // if the dictionary has values, check if the current cell position is already in the dictionary
                             if(!activeTiles.ContainsKey(cellPosition))  {
                             
-                                activeTiles.Add(cellPosition, "tilled");
+                                activeTiles.Add(cellPosition, 1);
                                 interactableMap.SetTile(cellPosition, tilledTile);
 
                                 // only plays animation if farming space is created
@@ -138,7 +147,7 @@ public class Player : MonoBehaviour
                 case "Watering Can":
 
                     if (tile != null && tile.name == "carrotFarmingTiles_0" && activeTiles.ContainsKey(cellPosition)) { // if the tile is not a blank tile, and the tile name is tilledDirt, and the tile's cell position is in the dictionary
-                        activeTiles[cellPosition] = "watered";
+                        activeTiles[cellPosition] = 2;
                         interactableMap.SetTile(cellPosition, wateredTile);
                         animator.Play("Player_WateringCan");
                     } 
@@ -148,8 +157,8 @@ public class Player : MonoBehaviour
                 case "Carrot Seed":
 
                     if (tile != null && tile.name == "carrotFarmingTiles_1" && activeTiles.ContainsKey(cellPosition)) { // if the tile is not a blank tile, and the tile name is wateredDirt, and the tile's cell position is in the dictionary
-                        activeTiles[cellPosition] = "carrot1_stage1";
-                        interactableMap.SetTile(cellPosition, wateredTile);
+                        activeTiles[cellPosition] = 3;
+                        interactableMap.SetTile(cellPosition, stage1GrowTile);
                         inventoryManager.GetSelectedItem(true);
                     }
 
@@ -170,6 +179,28 @@ public class Player : MonoBehaviour
         }
 
     } 
+
+    public void SleepSequence() {
+        // grow all crops
+        foreach(var position in interactableMap.cellBounds.allPositionsWithin) {
+            TileBase tile = interactableMap.GetTile(position);
+            if (tile != null) {
+                switch(tile.name) {
+                    case "carrotFarmingTiles_2":
+                        interactableMap.SetTile(position, stage2GrowTile);
+                        break;
+                    case "carrotFarmingTiles_3":
+                        interactableMap.SetTile(position, stage3GrowTile);
+                        break;
+                    case "carrotFarmingTiles_4":
+                        interactableMap.SetTile(position, stage4GrowTile);
+                        break;
+                }
+            }
+        }
+        // change time to 8am the next day
+        dayNightTime.ChangeTime(0, 0, 8, 1, true, false);
+    }
 
     private void UsingCD()
     {
@@ -211,6 +242,7 @@ public class Player : MonoBehaviour
 
             // not implemented yet
             case "Bed":
+                sleepMenu.SetActive(true);
                 break;
 
         }

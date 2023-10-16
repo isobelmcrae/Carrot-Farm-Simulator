@@ -6,7 +6,7 @@ using TMPro; // using text mesh for the clock display
 
 using UnityEngine.Rendering; // used to access the volume component
 
-public class DayNightScript : MonoBehaviour
+public class DayNightLighting : MonoBehaviour
 {
     public TextMeshProUGUI timeDisplay; // Display Time
     public TextMeshProUGUI dayDisplay; // Display Day
@@ -28,11 +28,32 @@ public class DayNightScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate() // we used fixed update, since update is frame dependant. 
+    void FixedUpdate() 
     {
         CalcTime();
         DisplayTime();
      
+    }
+
+    public void ChangeTime(float s, int m, int h, int d, bool incrementDay, bool incrementAll) // used to change time
+    {
+        if (incrementDay == true) {
+            seconds = s;
+            mins = m;
+            hours = h;
+            days += d;
+        } else if (incrementAll == true) {
+            seconds += s;
+            mins += m;
+            hours += h;
+            days += d;
+        } else {
+            seconds = s;
+            mins = m;
+            hours = h;
+            days = d;
+        }
+
     }
 
     public void CalcTime() // Used to calculate sec, min and hours
