@@ -107,22 +107,7 @@ public class DayNightLighting : MonoBehaviour
 
         if(hours>=6 && hours<7) // Dawn at 6:00 / 6am    -   until 7:00 / 7am
         {
-            ppv.weight = 1 - (float)mins / 60; // we minus 1 because we want it to go from 1 - 0
-            for (int i = 0; i < stars.Length; i++)
-            {
-                stars[i].color = new Color(stars[i].color.r, stars[i].color.g, stars[i].color.b, 1 -(float)mins / 60); // make stars invisible
-            }
-            if (activateLights == true) // if lights are on
-            {
-                if (mins > 45) // wait until pretty bright
-                {
-                    for (int i = 0; i < lights.Length; i++)
-                    {
-                        lights[i].SetActive(false); // shut them off
-                    }
-                    activateLights = false;
-                }
-            }
+            ppv.weight = 0; 
         }
     }
 

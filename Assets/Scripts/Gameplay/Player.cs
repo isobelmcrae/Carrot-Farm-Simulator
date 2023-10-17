@@ -205,7 +205,7 @@ public class Player : MonoBehaviour
             }
         }
         // change time to 8am the next day
-        dayNightTime.ChangeTime(0, 0, 8, 1, true, false);
+        dayNightTime.ChangeTime(0, 0, 6, 1, true, false);
     }
 
     private void UsingCD()
