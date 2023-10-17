@@ -11294,22 +11294,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b29c60d4056184bb6861d72affa7fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  game: {fileID: 1580488214}
   moveSpeed: 250
   animator: {fileID: 580219589}
   inventoryWindow: {fileID: 390114564}
-  dayNightLighting: {fileID: 82237000}
   sleepMenu: {fileID: 1526092037}
-  interactableMap: {fileID: 2109856123}
-  hiddenInteractableTile: {fileID: 11400000, guid: 7bddb67b9291fa045be5a30744494763, type: 2}
-  tilledTile: {fileID: 11400000, guid: 1ec524b30e1ca44759e0cf49471cce49, type: 2}
-  wateredTile: {fileID: 11400000, guid: b8afc2b2177474023b1e6fb8eb438620, type: 2}
-  stage1GrowTile: {fileID: 11400000, guid: 01515396247084798b63114b56f8668d, type: 2}
-  stage2GrowTile: {fileID: 11400000, guid: c588ed45adf084cbb8c76b27fd389a81, type: 2}
-  stage3GrowTile: {fileID: 11400000, guid: 0f77c2072220d4290a9ecbdfe0c79786, type: 2}
-  stage4GrowTile: {fileID: 11400000, guid: 2ed81bca9f9ae445bb8b53ca7178573f, type: 2}
   inventoryManager: {fileID: 2101294268}
-  dayNightTime: {fileID: 0}
-  enter: 0
 --- !u!50 &580219585
 Rigidbody2D:
   serializedVersion: 4
@@ -23265,8 +23255,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 580219584}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+      - m_Target: {fileID: 1580488214}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: SleepSequence
         m_Mode: 1
         m_Arguments:
@@ -23289,10 +23279,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 580219584}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: ChangeMenuState
-        m_Mode: 1
+      - m_Target: {fileID: 1580488214}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: MenuState
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -24198,10 +24188,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 580219584}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: ChangeMenuState
-        m_Mode: 1
+      - m_Target: {fileID: 1580488214}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: MenuState
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -31846,6 +31836,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1572450188}
   m_CullTransparentMesh: 1
+--- !u!1 &1580488212
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1580488213}
+  - component: {fileID: 1580488214}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1580488213
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580488212}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1634477127}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1580488214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580488212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c81a192bea82a493d8acc123228d8e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableMap: {fileID: 2109856123}
+  hiddenInteractable: {fileID: 11400000, guid: 7bddb67b9291fa045be5a30744494763, type: 2}
+  tilled: {fileID: 11400000, guid: 1ec524b30e1ca44759e0cf49471cce49, type: 2}
+  watered: {fileID: 11400000, guid: b8afc2b2177474023b1e6fb8eb438620, type: 2}
+  stage1Grow: {fileID: 11400000, guid: 01515396247084798b63114b56f8668d, type: 2}
+  stage2Grow: {fileID: 11400000, guid: c588ed45adf084cbb8c76b27fd389a81, type: 2}
+  stage3Grow: {fileID: 11400000, guid: 0f77c2072220d4290a9ecbdfe0c79786, type: 2}
+  stage4Grow: {fileID: 11400000, guid: 2ed81bca9f9ae445bb8b53ca7178573f, type: 2}
+  dayNightLighting: {fileID: 82237000}
+  inventoryManager: {fileID: 2101294268}
+  dayNightTime: {fileID: 0}
+  inMenu: 0
+  inHouse: 0
 --- !u!1001 &1584516927
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32022,6 +32069,7 @@ Transform:
   m_Children:
   - {fileID: 209431082}
   - {fileID: 2101294269}
+  - {fileID: 1580488213}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1686238070 stripped
@@ -37941,7 +37989,7 @@ Tilemap:
       - {fileID: 54356839, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
       - {fileID: 435326793, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
       - {fileID: -1398982570, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
-      m_AnimationSpeed: 5.0000005
+      m_AnimationSpeed: 5
       m_AnimationTimeOffset: 2
       m_Flags: 0
   - first: {x: 2, y: 9, z: 0}
@@ -38293,7 +38341,7 @@ Tilemap:
       - {fileID: 54356839, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
       - {fileID: 435326793, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
       - {fileID: -1398982570, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
-      m_AnimationSpeed: 5.0000005
+      m_AnimationSpeed: 5
       m_AnimationTimeOffset: 1
       m_Flags: 0
   - first: {x: 3, y: 15, z: 0}
@@ -38304,7 +38352,7 @@ Tilemap:
       - {fileID: 54356839, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
       - {fileID: 435326793, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
       - {fileID: -1398982570, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 4, y: 15, z: 0}
@@ -38403,7 +38451,7 @@ Tilemap:
       - {fileID: 54356839, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
       - {fileID: 435326793, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
       - {fileID: -1398982570, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 2
       m_Flags: 0
   - first: {x: 2, y: 17, z: 0}
