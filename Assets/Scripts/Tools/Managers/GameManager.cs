@@ -4,9 +4,12 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.Rendering;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject player;
     [Header("Farming")] // farming variables
     
     private Grid grid;
@@ -31,6 +34,18 @@ public class GameManager : MonoBehaviour
     public InventoryManager inventoryManager;
     public DayNightLighting dayNightTime;
 
+    [Header("Vendor")]
+    public Volume ppv;
+    public Camera vendorCam;
+    public Light2D globalLight;
+
+    public Light2D playerSpotlight1;
+    public Light2D playerSpotlight2;
+
+    [Header("Misc")]
+
+    public GameObject endDayMenu;
+
     // indicates when a player is in a menu
     public bool inMenu = false;
 
@@ -40,6 +55,10 @@ public class GameManager : MonoBehaviour
     private void Start() {
         cam = Camera.main;
         grid = GameObject.Find("FarmingSpace").GetComponent<Grid>();
+        vendorCam.enabled = false;
+
+        playerSpotlight1.enabled = false;
+        playerSpotlight2.enabled = false;
 
         // interactable white tiles indicate which spaces can be interacted with, but are hidden from the player on startup
         foreach(var position in interactableMap.cellBounds.allPositionsWithin) {
@@ -75,9 +94,15 @@ public class GameManager : MonoBehaviour
 
     }
 
+    IEnumerator waitSeconds() {
+        yield return new WaitForSeconds(3);
+    }
+
     public void SleepSequence() {
 
         growCrops();
+        // waitSeconds();
+
         // change time to 8am the next day
         dayNightTime.ChangeTime(0, 0, 6, 1, true, false);
 
@@ -134,6 +159,18 @@ public class GameManager : MonoBehaviour
                 break;
         }    
     }
+
+    public void VendorSetup() {
+        globalLight.intensity = 0.16f;
+        ppv.enabled = false;
+        cam.enabled = false;
+        vendorCam.enabled = true;
+        player.transform.position = new Vector3(-30, -3.5f, 0);
+
+        playerSpotlight1.enabled = true;
+        playerSpotlight2.enabled = true;
+    } 
+
 
     public void growCrops() {
         foreach(var position in interactableMap.cellBounds.allPositionsWithin) {

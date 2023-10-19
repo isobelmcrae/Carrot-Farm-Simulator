@@ -135,20 +135,15 @@ public class Player : MonoBehaviour
                     GameObject.Find("Roof").GetComponent<TilemapRenderer>().sortingOrder = -1;
                 }
                 break;
-            
-            // Josh's code for entering and exiting the vendor scene
-            case "vendorEntryPoint":
-                SceneManager.LoadScene("VendorScene");
-                break;
-
-            case "vendorExitPoint":
-                SceneManager.LoadScene("FarmScene");
-                break;
 
             // not implemented yet
             case "Bed":
                 sleepMenu.SetActive(true);
                 game.inMenu = true;
+                break;
+
+            case "Vendor":
+                game.VendorSetup();
                 break;
 
         }

@@ -116,5 +116,6 @@ public class DayNightLighting : MonoBehaviour
 
         timeDisplay.text = string.Format("{0:00}:{1:00}", hours, mins); // The formatting ensures that there will always be 0's in empty spaces
         dayDisplay.text = "Day: " + days; // display day counter
+        
     }
 }  

@@ -9,6 +9,8 @@ TagManager:
   - vendorEntryPoint
   - vendorExitPoint
   - Bed
+  - Sign
+  - Vendor
   layers:
   - Default
   - TransparentFX
