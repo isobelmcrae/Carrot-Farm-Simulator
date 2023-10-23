@@ -31,7 +31,6 @@ public class GameManager : MonoBehaviour
     [Header("Time")]
 
     public GameObject dayNightLighting;
-    public InventoryManager inventoryManager;
     public DayNightLighting dayNightTime;
 
     [Header("Vendor")]
@@ -39,11 +38,17 @@ public class GameManager : MonoBehaviour
     public Camera vendorCam;
     public Light2D globalLight;
 
+    // vendor scene player spotlights
     public Light2D playerSpotlight1;
     public Light2D playerSpotlight2;
 
+    [Header("UI")]
+    public UIManager ui;
+
     [Header("Misc")]
 
+    public Item Carrot;
+    public InventoryManager inventoryManager;
     public GameObject endDayMenu;
 
     // indicates when a player is in a menu
@@ -53,10 +58,12 @@ public class GameManager : MonoBehaviour
     public bool inHouse = false;
 
     private void Start() {
+        // sets cam to main camera, finds the grid, and disables the vendor camera
         cam = Camera.main;
         grid = GameObject.Find("FarmingSpace").GetComponent<Grid>();
         vendorCam.enabled = false;
 
+        // disables spotlights for vendor scene
         playerSpotlight1.enabled = false;
         playerSpotlight2.enabled = false;
 
@@ -93,19 +100,73 @@ public class GameManager : MonoBehaviour
         }
 
     }
+    
+    // checks if the carrot's stage is the highest stage (therefore is harvestable)
+    public bool isHarvestable(Vector3Int position) {
+        TileBase tile = interactableMap.GetTile(position);
+        if (tile != null) {
+            if (tile.name == "carrotFarmingTiles_5") {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
 
-    IEnumerator waitSeconds() {
-        yield return new WaitForSeconds(3);
+    
+   // harvests tile at position if harvestable
+    public void harvest(Vector3Int position) {
+        TileBase tile = interactableMap.GetTile(position);
+        if (isHarvestable(position)) {
+            inventoryManager.AddItem(Carrot);
+            removeTile(position);
+        } 
+    }
+    
+    // sets up the vendor area using the fade to/from black effect
+    IEnumerator vendorSet() {
+        ui.fadeToBlack(true);
+        yield return new WaitForSeconds(0.5f);
+        globalLight.intensity = 0.16f;
+        ppv.enabled = false;
+        cam.enabled = false;
+        vendorCam.enabled = true;
+        player.transform.position = new Vector3(-30, -3.5f, 0);
+
+        playerSpotlight1.enabled = true;
+        playerSpotlight2.enabled = true;
+        ui.fadeToBlack(false);
+    }
+
+    // sets up the farm using the fade to/from black effect
+    IEnumerator farmSet() {
+        ui.fadeToBlack(true);
+        yield return new WaitForSeconds(0.5f);
+        globalLight.intensity = 1;
+        ppv.enabled = true;
+        cam.enabled = true;
+        vendorCam.enabled = false;
+        player.transform.position = new Vector3(-7.5f, 19.5f, 0);
+
+        playerSpotlight1.enabled = false;
+        playerSpotlight2.enabled = false;
+        ui.fadeToBlack(false);
+    }
+
+    // fade to black effect for sleeping
+    IEnumerator sleepFade() {
+        ui.fadeToBlack(true);
+        yield return new WaitForSeconds(0.5f);
+        growCrops();
+        // change time to 8am the next day
+        dayNightTime.ChangeTime(0, 0, 6, 1, true, false);
+        ui.fadeToBlack(false);
     }
 
     public void SleepSequence() {
-
-        growCrops();
-        // waitSeconds();
-
-        // change time to 8am the next day
-        dayNightTime.ChangeTime(0, 0, 6, 1, true, false);
-
+        StartCoroutine(sleepFade());
     }
 
     public Vector3Int mouseToTilePosition() {
@@ -122,6 +183,12 @@ public class GameManager : MonoBehaviour
 
         return cellPosition;
     }
+
+    public void removeTile(Vector3Int cellPosition) {
+        activeTiles.Remove(cellPosition);
+        interactableMap.SetTile(cellPosition, hiddenInteractable);
+    }
+
 
     public void addTile(Vector3Int cellPosition, string tileName) {
         TileBase tile = interactableMap.GetTile(cellPosition);
@@ -161,15 +228,12 @@ public class GameManager : MonoBehaviour
     }
 
     public void VendorSetup() {
-        globalLight.intensity = 0.16f;
-        ppv.enabled = false;
-        cam.enabled = false;
-        vendorCam.enabled = true;
-        player.transform.position = new Vector3(-30, -3.5f, 0);
-
-        playerSpotlight1.enabled = true;
-        playerSpotlight2.enabled = true;
+        StartCoroutine(vendorSet());
     } 
+
+    public void FarmSetup() {
+        StartCoroutine(farmSet());
+    }
 
 
     public void growCrops() {

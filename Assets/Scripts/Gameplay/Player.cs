@@ -76,6 +76,10 @@ public class Player : MonoBehaviour
                     if(game.isInteractable(cellPosition)) {
                         game.addTile(cellPosition, "tilled");
                         animator.Play("PlayerHoe");
+                    } else {
+                        if (game.isHarvestable(cellPosition)) {
+                            game.harvest(cellPosition);
+                        }
                     }
 
                     break;
@@ -84,11 +88,20 @@ public class Player : MonoBehaviour
 
                     game.addTile(cellPosition, "watered");
                     animator.Play("Player_WateringCan");
+
+                    if (game.isHarvestable(cellPosition)) {
+                        game.harvest(cellPosition);
+                    }
                     break;
                 
                 case "Carrot Seed":
 
                     game.addTile(cellPosition, "stage1Grow");
+
+                    if (game.isHarvestable(cellPosition)) {
+                        game.harvest(cellPosition);
+                    }
+                    
                     break;
 
             }
@@ -142,8 +155,12 @@ public class Player : MonoBehaviour
                 game.inMenu = true;
                 break;
 
-            case "Vendor":
+            case "vendorEntryPoint":
                 game.VendorSetup();
+                break;
+            
+            case "vendorExitPoint":
+                game.FarmSetup();
                 break;
 
         }

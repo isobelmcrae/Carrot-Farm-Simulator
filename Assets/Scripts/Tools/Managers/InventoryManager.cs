@@ -36,7 +36,7 @@ public class InventoryManager : MonoBehaviour
             if (isNumber && number > 0 && number < 8)
             {
                 ChangeSelectedSlot(number - 1);
-                inventoryText.text = GetSelectedItem(false).name.ToLower();
+                // inventoryText.text = GetSelectedItem(false).name.ToLower();
             }
         }
     }
