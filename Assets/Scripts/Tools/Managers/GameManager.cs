@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     private Camera cam;
 
     Dictionary<Vector3Int, int> activeTiles = new Dictionary<Vector3Int, int>();
-    [SerializeField] private Tilemap interactableMap;
+    public Tilemap interactableMap;
     
     [Header("Tiles")]
 

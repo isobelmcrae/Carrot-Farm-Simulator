@@ -69,6 +69,9 @@ public class Player : MonoBehaviour
                 
                 // check for null value
                 case null:
+                    if (game.isHarvestable(cellPosition)) {
+                        game.harvest(cellPosition);
+                    }
                     break;
 
                 case "Hoe":
@@ -95,13 +98,14 @@ public class Player : MonoBehaviour
                     break;
                 
                 case "Carrot Seed":
-
-                    game.addTile(cellPosition, "stage1Grow");
-
                     if (game.isHarvestable(cellPosition)) {
                         game.harvest(cellPosition);
+                    } else {
+                        // removes carrot seed from inventory
+                        inventoryManager.GetSelectedItem(true);
+                        game.addTile(cellPosition, "stage1Grow");
                     }
-                    
+
                     break;
 
             }
