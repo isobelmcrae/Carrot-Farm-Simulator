@@ -35436,11 +35436,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 4566342604673475805, guid: 6184df77a27fc4701953201639881e22, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.29
+      value: -30.31
       objectReference: {fileID: 0}
     - target: {fileID: 4566342604673475805, guid: 6184df77a27fc4701953201639881e22, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 24.57
+      value: 23.4
       objectReference: {fileID: 0}
     - target: {fileID: 4566342604673475805, guid: 6184df77a27fc4701953201639881e22, type: 3}
       propertyPath: m_LocalPosition.z
@@ -52869,7 +52869,7 @@ Tilemap:
       - {fileID: 54356839, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
       - {fileID: 435326793, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
       - {fileID: -1398982570, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 2
       m_Flags: 0
   - first: {x: 1, y: 12, z: 0}
@@ -52968,7 +52968,7 @@ Tilemap:
       - {fileID: 54356839, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
       - {fileID: 435326793, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
       - {fileID: -1398982570, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 4, y: 13, z: 0}
@@ -53122,7 +53122,7 @@ Tilemap:
       - {fileID: 54356839, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
       - {fileID: 435326793, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
       - {fileID: -1398982570, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 2
       m_Flags: 0
   - first: {x: 0, y: 16, z: 0}
@@ -53177,7 +53177,7 @@ Tilemap:
       - {fileID: 54356839, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
       - {fileID: 435326793, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
       - {fileID: -1398982570, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 2
       m_Flags: 0
   - first: {x: 5, y: 16, z: 0}
