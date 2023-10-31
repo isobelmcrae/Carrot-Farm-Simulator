@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -33,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -70,11 +72,12 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -87,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -99,11 +103,453 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Mailbox Animation Frames_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 29.333334
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19c2d323a1f4e492b9f838ea4b79be16
+      internalID: 2016314292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mailbox Animation Frames_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 29.333334
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 815aa5a75f18748848efedd0481dc4b7
+      internalID: -944044403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mailbox Animation Frames_2
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 240
+        width: 29.333334
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afecbd0f080274f48b3396c00787d9e0
+      internalID: -1990769926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mailbox Animation Frames_3
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 240
+        width: 29.333334
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e36a93dde02b462bb777dcbda457202
+      internalID: -1942690261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mailbox Animation Frames_4
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 240
+        width: 29.333334
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94095343c912f45f0a757b20890bb8ab
+      internalID: 1527686441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mailbox Animation Frames_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 29.333334
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a006858479475432588ce61f723185e9
+      internalID: 540211491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mailbox Animation Frames_6
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 192
+        width: 29.333334
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c83f2da0acf7240ee87ccc731593575a
+      internalID: -600913855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mailbox Animation Frames_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 29.333334
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9a099cab9bf347b9b4e1efeb322b479
+      internalID: -730219781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mailbox Animation Frames_8
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 144
+        width: 29.333334
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9164c1bcae53449f976c25410adbae4
+      internalID: 43014098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mailbox Animation Frames_9
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 144
+        width: 29.333334
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eb5793bacd564f8cb25afbc9d66f3d7
+      internalID: -1087570607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mailbox Animation Frames_10
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 144
+        width: 29.333334
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 916ecf3cb873147ddac38327d15af6f5
+      internalID: -316223230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mailbox Animation Frames_11
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 144
+        width: 29.333334
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d7e89cc47844673864e8a57ab9120e
+      internalID: -1499441301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mailbox Animation Frames_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 29.333334
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0389eae74140f4c26b323bf30091076c
+      internalID: -843635654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mailbox Animation Frames_13
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 96
+        width: 29.333334
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fd66c6f2a22b4221a83d88b1c479ce8
+      internalID: 1557333110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mailbox Animation Frames_14
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 96
+        width: 29.333334
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a400032ecc1584267a1a7065765172b5
+      internalID: 1566205498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mailbox Animation Frames_15
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 96
+        width: 29.333334
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ec1a1b34d0774ae7a2410a227a28b33
+      internalID: 1850343613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mailbox Animation Frames_16
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 96
+        width: 29.333334
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f479ab87a420d4cdca2ffb00a53654c0
+      internalID: 1764394399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mailbox Animation Frames_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 29.333334
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5801896645f82436097a81172bf662dc
+      internalID: 123829311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mailbox Animation Frames_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 29.333334
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46eef17a55438436b804b362022ab216
+      internalID: -1460981842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mailbox Animation Frames_19
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 0
+        width: 29.333334
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fd128c201786438a9542115aa4af19d
+      internalID: 539798880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mailbox Animation Frames_20
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 0
+        width: 29.333334
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d82e232ec01fc4cb09c4f7a06d4d3fa2
+      internalID: 652394475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,10 +560,30 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
-  spritePackingTag: 
+    nameFileIdTable:
+      Mailbox Animation Frames_0: 2016314292
+      Mailbox Animation Frames_1: -944044403
+      Mailbox Animation Frames_10: -316223230
+      Mailbox Animation Frames_11: -1499441301
+      Mailbox Animation Frames_12: -843635654
+      Mailbox Animation Frames_13: 1557333110
+      Mailbox Animation Frames_14: 1566205498
+      Mailbox Animation Frames_15: 1850343613
+      Mailbox Animation Frames_16: 1764394399
+      Mailbox Animation Frames_17: 123829311
+      Mailbox Animation Frames_18: -1460981842
+      Mailbox Animation Frames_19: 539798880
+      Mailbox Animation Frames_2: -1990769926
+      Mailbox Animation Frames_20: 652394475
+      Mailbox Animation Frames_3: -1942690261
+      Mailbox Animation Frames_4: 1527686441
+      Mailbox Animation Frames_5: 540211491
+      Mailbox Animation Frames_6: -600913855
+      Mailbox Animation Frames_7: -730219781
+      Mailbox Animation Frames_8: 43014098
+      Mailbox Animation Frames_9: -1087570607
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

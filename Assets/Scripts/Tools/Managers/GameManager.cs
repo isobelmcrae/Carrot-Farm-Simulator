@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     private Grid grid;
     private Camera cam;
 
-    Dictionary<Vector3Int, int> activeTiles = new Dictionary<Vector3Int, int>();
+    Dictionary<Vector3Int, int, string> activeTiles = new Dictionary<Vector3Int, int, string>();
     public Tilemap interactableMap;
     
     [Header("Tiles")]
@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Misc")]
 
+    public int money = 0;
     public Item Carrot;
     public InventoryManager inventoryManager;
     public GameObject endDayMenu;
@@ -169,6 +170,19 @@ public class GameManager : MonoBehaviour
         StartCoroutine(sleepFade());
     }
 
+    public void AddMoney(int money) {
+        this.money += money;
+    }
+
+    public bool RemoveMoney(int money) {
+        if (this.money - money < 0) {
+            return false;
+        } else {
+            this.money -= money;
+            return true;
+        }
+    }
+
     public Vector3Int mouseToTilePosition() {
         
         Vector3 point = new Vector3();
@@ -190,7 +204,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void addTile(Vector3Int cellPosition, string tileName) {
+    public void addTile(Vector3Int cellPosition, string tileName, string seedType) {
         TileBase tile = interactableMap.GetTile(cellPosition);
 
         switch(tileName) {
