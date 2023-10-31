@@ -108,6 +108,86 @@ public class Player : MonoBehaviour
 
                     break;
 
+                case "Lover Carrot Seed":
+                    if (game.isHarvestable(cellPosition)) {
+                        game.harvest(cellPosition);
+                    } else {
+                        // removes carrot seed from inventory
+                        inventoryManager.GetSelectedItem(true);
+                        game.addTile(cellPosition, "stage1Grow");
+                    }
+
+                    break;
+                
+                case "Baby Carrot Seed":
+                    if (game.isHarvestable(cellPosition)) {
+                        game.harvest(cellPosition);
+                    } else {
+                        // removes carrot seed from inventory
+                        inventoryManager.GetSelectedItem(true);
+                        game.addTile(cellPosition, "stage1Grow");
+                    }
+
+                    break;
+
+                case "Dirty Carrot Seed":
+                    if (game.isHarvestable(cellPosition)) {
+                        game.harvest(cellPosition);
+                    } else {
+                        // removes carrot seed from inventory
+                        inventoryManager.GetSelectedItem(true);
+                        game.addTile(cellPosition, "stage1Grow");
+                    }
+
+                    break;
+                
+                case "Golden Carrot Seed":
+                    if (game.isHarvestable(cellPosition)) {
+                        game.harvest(cellPosition);
+                    } else {
+                        // removes carrot seed from inventory
+                        inventoryManager.GetSelectedItem(true);
+                        game.addTile(cellPosition, "stage1Grow");
+                    }
+
+                    break;
+
+                case "Muscle Carrot Seed":
+                    if (game.isHarvestable(cellPosition)) {
+                        game.harvest(cellPosition);
+                    } else {
+                        // removes carrot seed from inventory
+                        inventoryManager.GetSelectedItem(true);
+                        game.addTile(cellPosition, "stage1Grow");
+                    }
+
+                    break;
+                
+                case "Princess Carrot Seed":
+                    if (game.isHarvestable(cellPosition)) {
+                        game.harvest(cellPosition);
+                    } else {
+                        // removes carrot seed from inventory
+                        inventoryManager.GetSelectedItem(true);
+                        game.addTile(cellPosition, "stage1Grow");
+                    }
+
+                    break;
+
+                case "Super Carrot Seed":
+                    if (game.isHarvestable(cellPosition)) {
+                        game.harvest(cellPosition);
+                    } else {
+                        // removes carrot seed from inventory
+                        inventoryManager.GetSelectedItem(true);
+                        game.addTile(cellPosition, "stage1Grow");
+                    }
+
+                    break;
+
+                
+
+
             }
 
         }
