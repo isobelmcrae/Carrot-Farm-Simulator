@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     private Grid grid;
     private Camera cam;
 
-    Dictionary<Vector3Int, int, string> activeTiles = new Dictionary<Vector3Int, int, string>();
+    Dictionary<Vector3Int, int> activeTiles = new Dictionary<Vector3Int, int>();
     public Tilemap interactableMap;
     
     [Header("Tiles")]
@@ -204,7 +204,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void addTile(Vector3Int cellPosition, string tileName, string seedType) {
+    public void addTile(Vector3Int cellPosition, string tileName) {
         TileBase tile = interactableMap.GetTile(cellPosition);
 
         switch(tileName) {

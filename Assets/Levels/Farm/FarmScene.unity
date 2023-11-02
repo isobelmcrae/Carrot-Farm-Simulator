@@ -31338,6 +31338,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aaed86224b4244758287c59beee0a64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &968780889
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 968780890}
+  m_Layer: 0
+  m_Name: Games
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &968780890
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968780889}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.40991, y: 9.78096, z: 0.051147006}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &970510074
 GameObject:
   m_ObjectHideFlags: 0
@@ -46762,6 +46793,7 @@ MonoBehaviour:
   playerSpotlight1: {fileID: 1842901906}
   playerSpotlight2: {fileID: 166775033}
   ui: {fileID: 792309674}
+  money: 0
   Carrot: {fileID: 11400000, guid: dd4fccfc04cacbb4391f2ad9bc55ab35, type: 2}
   inventoryManager: {fileID: 2101294268}
   endDayMenu: {fileID: 1658379487}
@@ -58103,3 +58135,4 @@ SceneRoots:
   - {fileID: 68079189}
   - {fileID: 702809063}
   - {fileID: 1434082680}
+  - {fileID: 968780890}
