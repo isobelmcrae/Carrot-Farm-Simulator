@@ -23,10 +23,46 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Tile hiddenInteractable;
     [SerializeField] private Tile tilled;
     [SerializeField] private Tile watered;
-    [SerializeField] private Tile stage1Grow;
-    [SerializeField] private Tile stage2Grow;
-    [SerializeField] private Tile stage3Grow;
-    [SerializeField] private Tile stage4Grow;
+
+    [SerializeField] private Tile stage1CarrotGrow;
+    [SerializeField] private Tile stage2CarrotGrow;
+    [SerializeField] private Tile stage3CarrotGrow;
+    [SerializeField] private Tile stage4CarrotGrow;
+
+    [SerializeField] private Tile stage1BabyGrow;
+    [SerializeField] private Tile stage2BabyGrow;
+    [SerializeField] private Tile stage3BabyGrow;
+    [SerializeField] private Tile stage4BabyGrow;
+
+    [SerializeField] private Tile stage1DirtyGrow;
+    [SerializeField] private Tile stage2DirtyGrow;
+    [SerializeField] private Tile stage3DirtyGrow;
+    [SerializeField] private Tile stage4DirtyGrow;
+
+    [SerializeField] private Tile stage1MuscleGrow;
+    [SerializeField] private Tile stage2MuscleGrow;
+    [SerializeField] private Tile stage3MuscleGrow;
+    [SerializeField] private Tile stage4MuscleGrow;
+
+    [SerializeField] private Tile stage1PrincessGrow;
+    [SerializeField] private Tile stage2PrincessGrow;
+    [SerializeField] private Tile stage3PrincessGrow;
+    [SerializeField] private Tile stage4PrincessGrow;
+
+    [SerializeField] private Tile stage1LoversGrow;
+    [SerializeField] private Tile stage2LoversGrow;
+    [SerializeField] private Tile stage3LoversGrow;
+    [SerializeField] private Tile stage4LoversGrow;
+
+    [SerializeField] private Tile stage1SuperGrow;
+    [SerializeField] private Tile stage2SuperGrow;
+    [SerializeField] private Tile stage3SuperGrow;
+    [SerializeField] private Tile stage4SuperGrow;
+
+    [SerializeField] private Tile stage1GoldenGrow;
+    [SerializeField] private Tile stage2GoldenGrow;
+    [SerializeField] private Tile stage3GoldenGrow;
+    [SerializeField] private Tile stage4GoldenGrow;
 
     [Header("Time")]
 
@@ -223,24 +259,108 @@ public class GameManager : MonoBehaviour
 
             case "watered":
 
-                if (tile != null && tile.name == "carrotFarmingTiles_0" && activeTiles.ContainsKey(cellPosition)) {
+                if (tile != null && tile.name == "carrottiles_0" && activeTiles.ContainsKey(cellPosition)) {
                     activeTiles[cellPosition] = 2;
                     interactableMap.SetTile(cellPosition, watered);
                 }
 
                 break;
             
-            case "stage1Grow":
+            case "stage1CarrotGrow":
     
-                if (tile != null && tile.name == "carrotFarmingTiles_1" && activeTiles.ContainsKey(cellPosition)) {
+                if (tile != null && tile.name == "carrottiles_1" && activeTiles.ContainsKey(cellPosition)) {
                     activeTiles[cellPosition] = 3;
-                    interactableMap.SetTile(cellPosition, stage1Grow);
+                    interactableMap.SetTile(cellPosition, stage1CarrotGrow);
                     // removes carrot seed from inventory after planting
                     inventoryManager.GetSelectedItem(true);
                 }
     
                 break;
-        }    
+
+            case "stage1BabyGrow":
+
+                if (tile != null && tile.name == "carrottiles_1" && activeTiles.ContainsKey(cellPosition))
+                {
+                    activeTiles[cellPosition] = 3;
+                    interactableMap.SetTile(cellPosition, stage1BabyGrow);
+                    // removes carrot seed from inventory after planting
+                    inventoryManager.GetSelectedItem(true);
+                }
+
+                break;
+
+            case "stage1DirtyGrow":
+
+                if (tile != null && tile.name == "carrottiles_1" && activeTiles.ContainsKey(cellPosition))
+                {
+                    activeTiles[cellPosition] = 3;
+                    interactableMap.SetTile(cellPosition, stage1DirtyGrow);
+                    // removes carrot seed from inventory after planting
+                    inventoryManager.GetSelectedItem(true);
+                }
+
+                break;
+
+            case "stage1MuscleGrow":
+
+                if (tile != null && tile.name == "carrottiles_1" && activeTiles.ContainsKey(cellPosition))
+                {
+                    activeTiles[cellPosition] = 3;
+                    interactableMap.SetTile(cellPosition, stage1MuscleGrow);
+                    // removes carrot seed from inventory after planting
+                    inventoryManager.GetSelectedItem(true);
+                }
+
+                break;
+
+            case "stage1PrincessGrow":
+
+                if (tile != null && tile.name == "carrottiles_1" && activeTiles.ContainsKey(cellPosition))
+                {
+                    activeTiles[cellPosition] = 3;
+                    interactableMap.SetTile(cellPosition, stage1PrincessGrow);
+                    // removes carrot seed from inventory after planting
+                    inventoryManager.GetSelectedItem(true);
+                }
+
+                break;
+
+            case "stage1LoversGrow":
+
+                if (tile != null && tile.name == "carrottiles_1" && activeTiles.ContainsKey(cellPosition))
+                {
+                    activeTiles[cellPosition] = 3;
+                    interactableMap.SetTile(cellPosition, stage1LoversGrow);
+                    // removes carrot seed from inventory after planting
+                    inventoryManager.GetSelectedItem(true);
+                }
+
+                break;
+
+            case "stage1SuperGrow":
+
+                if (tile != null && tile.name == "carrottiles_1" && activeTiles.ContainsKey(cellPosition))
+                {
+                    activeTiles[cellPosition] = 3;
+                    interactableMap.SetTile(cellPosition, stage1SuperGrow);
+                    // removes carrot seed from inventory after planting
+                    inventoryManager.GetSelectedItem(true);
+                }
+
+                break;
+
+            case "stage1GoldenGrow":
+
+                if (tile != null && tile.name == "carrottiles_1" && activeTiles.ContainsKey(cellPosition))
+                {
+                    activeTiles[cellPosition] = 3;
+                    interactableMap.SetTile(cellPosition, stage1GoldenGrow);
+                    // removes carrot seed from inventory after planting
+                    inventoryManager.GetSelectedItem(true);
+                }
+
+                break;
+        }
     }
 
     public void VendorSetup() {
@@ -258,15 +378,78 @@ public class GameManager : MonoBehaviour
 
             if (tile != null) {
                 switch(tile.name) {
-                    case "carrotFarmingTiles_2":
-                        interactableMap.SetTile(position, stage2Grow);
+                    case "carrottiles_2":
+                        interactableMap.SetTile(position, stage2CarrotGrow);
                         break;
-                    case "carrotFarmingTiles_3":
-                        interactableMap.SetTile(position, stage3Grow);
+                    case "carrottiles_3":
+                        interactableMap.SetTile(position, stage3CarrotGrow);
                         break;
-                    case "carrotFarmingTiles_4":
-                        interactableMap.SetTile(position, stage4Grow);
-                        break;   
+                    case "carrottiles_4":
+                        interactableMap.SetTile(position, stage4CarrotGrow);
+                        break;
+                    case "carrottiles_6":
+                        interactableMap.SetTile(position, stage2BabyGrow);
+                        break;
+                    case "carrottiles_7":
+                        interactableMap.SetTile(position, stage3BabyGrow);
+                        break;
+                    case "carrottiles_8":
+                        interactableMap.SetTile(position, stage4BabyGrow);
+                        break;
+                    case "carrottiles_10":
+                        interactableMap.SetTile(position, stage2DirtyGrow);
+                        break;
+                    case "carrottiles_11":
+                        interactableMap.SetTile(position, stage3DirtyGrow);
+                        break;
+                    case "carrottiles_12":
+                        interactableMap.SetTile(position, stage4DirtyGrow);
+                        break;
+                    case "carrottiles_14":
+                        interactableMap.SetTile(position, stage2MuscleGrow);
+                        break;
+                    case "carrottiles_15":
+                        interactableMap.SetTile(position, stage3MuscleGrow);
+                        break;
+                    case "carrottiles_16":
+                        interactableMap.SetTile(position, stage4MuscleGrow);
+                        break;
+                    case "carrottiles_18":
+                        interactableMap.SetTile(position, stage2PrincessGrow);
+                        break;
+                    case "carrottiles_19":
+                        interactableMap.SetTile(position, stage3PrincessGrow);
+                        break;
+                    case "carrottiles_20":
+                        interactableMap.SetTile(position, stage4PrincessGrow);
+                        break;
+                    case "carrottiles_22":
+                        interactableMap.SetTile(position, stage2LoversGrow);
+                        break;
+                    case "carrottiles_23":
+                        interactableMap.SetTile(position, stage3LoversGrow);
+                        break;
+                    case "carrottiles_24":
+                        interactableMap.SetTile(position, stage4LoversGrow);
+                        break;
+                    case "carrottiles_26":
+                        interactableMap.SetTile(position, stage2SuperGrow);
+                        break;
+                    case "carrottiles_27":
+                        interactableMap.SetTile(position, stage3SuperGrow);
+                        break;
+                    case "carrottiles_28":
+                        interactableMap.SetTile(position, stage4SuperGrow);
+                        break;
+                    case "carrottiles_30":
+                        interactableMap.SetTile(position, stage2GoldenGrow);
+                        break;
+                    case "carrottiles_31":
+                        interactableMap.SetTile(position, stage3GoldenGrow);
+                        break;
+                    case "carrottiles_32":
+                        interactableMap.SetTile(position, stage4GoldenGrow);
+                        break;
                 }
             }
         }
