@@ -100,9 +100,8 @@ public class Player : MonoBehaviour
                 case "Carrot Seed":
                     if (game.isHarvestable(cellPosition)) {
                         game.harvest(cellPosition);
-                    } else {
-                        // removes carrot seed from inventory
-                        inventoryManager.GetSelectedItem(true);
+                    } else                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 {
+                        // checks if circumstances are perfect for seed planting
                         game.addTile(cellPosition, "stage1Grow");
                     }
 
@@ -112,8 +111,7 @@ public class Player : MonoBehaviour
                     if (game.isHarvestable(cellPosition)) {
                         game.harvest(cellPosition);
                     } else {
-                        // removes carrot seed from inventory
-                        inventoryManager.GetSelectedItem(true);
+                        // checks if circumstances are perfect for seed planting
                         game.addTile(cellPosition, "stage1Grow");
                     }
 
@@ -123,8 +121,7 @@ public class Player : MonoBehaviour
                     if (game.isHarvestable(cellPosition)) {
                         game.harvest(cellPosition);
                     } else {
-                        // removes carrot seed from inventory
-                        inventoryManager.GetSelectedItem(true);
+                        // checks if circumstances are perfect for seed planting
                         game.addTile(cellPosition, "stage1Grow");
                     }
 
@@ -134,8 +131,7 @@ public class Player : MonoBehaviour
                     if (game.isHarvestable(cellPosition)) {
                         game.harvest(cellPosition);
                     } else {
-                        // removes carrot seed from inventory
-                        inventoryManager.GetSelectedItem(true);
+                        // checks if circumstances are perfect for seed planting
                         game.addTile(cellPosition, "stage1Grow");
                     }
 
@@ -145,8 +141,7 @@ public class Player : MonoBehaviour
                     if (game.isHarvestable(cellPosition)) {
                         game.harvest(cellPosition);
                     } else {
-                        // removes carrot seed from inventory
-                        inventoryManager.GetSelectedItem(true);
+                        // checks if circumstances are perfect for seed planting
                         game.addTile(cellPosition, "stage1Grow");
                     }
 
@@ -156,8 +151,7 @@ public class Player : MonoBehaviour
                     if (game.isHarvestable(cellPosition)) {
                         game.harvest(cellPosition);
                     } else {
-                        // removes carrot seed from inventory
-                        inventoryManager.GetSelectedItem(true);
+                        // checks if circumstances are perfect for seed planting
                         game.addTile(cellPosition, "stage1Grow");
                     }
 
@@ -167,8 +161,7 @@ public class Player : MonoBehaviour
                     if (game.isHarvestable(cellPosition)) {
                         game.harvest(cellPosition);
                     } else {
-                        // removes carrot seed from inventory
-                        inventoryManager.GetSelectedItem(true);
+                        // checks if circumstances are perfect for seed planting
                         game.addTile(cellPosition, "stage1Grow");
                     }
 
@@ -178,8 +171,7 @@ public class Player : MonoBehaviour
                     if (game.isHarvestable(cellPosition)) {
                         game.harvest(cellPosition);
                     } else {
-                        // removes carrot seed from inventory
-                        inventoryManager.GetSelectedItem(true);
+                        // checks if circumstances are perfect for seed planting
                         game.addTile(cellPosition, "stage1Grow");
                     }
 
