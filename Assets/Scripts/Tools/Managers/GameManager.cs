@@ -235,6 +235,8 @@ public class GameManager : MonoBehaviour
                 if (tile != null && tile.name == "carrotFarmingTiles_1" && activeTiles.ContainsKey(cellPosition)) {
                     activeTiles[cellPosition] = 3;
                     interactableMap.SetTile(cellPosition, stage1Grow);
+                    // removes carrot seed from inventory after planting
+                    inventoryManager.GetSelectedItem(true);
                 }
     
                 break;
