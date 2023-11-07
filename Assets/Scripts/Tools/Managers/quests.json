@@ -1,0 +1,42 @@
+{
+    "1": {
+        "title": "Welcome to the Jungle",
+        "description": "Welcome to your first quest! You are in a jungle. You see a tiger. What do you do? Farm carrots!",
+        "requirement": {
+            "type": "carrot",
+            "amount": 3
+        },
+        "reward": 20
+    },
+
+    "2": {
+        "title": "Carrot Conundrum at the Royal Feast",
+        "description": "The princess has mysteriously disappeared! Cook up a feast that is sure to lure her back.",
+        "requirement": {
+            "type": "princess carrot",
+            "quantity": 2
+        },
+        "reward": 50
+    },
+
+    "3": {
+        "title": "Farmer's Market Fiasco",
+        "description": "The annual farmer's market is facing an unexpected shortage of carrots! Help them out by bringing some of your own.",
+        "requirement": {
+            "type": "carrot",
+            "quantity": 7
+        },
+        "reward": 100
+    },
+
+    "4": {
+        "title": "Carrot Cartel Conspiracy",
+        "description": "Rumor has it that the Carrot Cartel has set up in the jungle. They might be planning something big. Go investigate.",
+        "requirement": {
+            "type": null,
+            "quantity": null,
+            "action": "talkToVendor"
+        },
+        "reward": 10
+    }
+}

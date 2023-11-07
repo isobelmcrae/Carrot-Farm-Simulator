@@ -42,6 +42,8 @@ public class GameManager : MonoBehaviour
     public Light2D playerSpotlight1;
     public Light2D playerSpotlight2;
 
+    [Header("Quests")]
+
     [Header("UI")]
     public UIManager ui;
 
@@ -165,15 +167,18 @@ public class GameManager : MonoBehaviour
         dayNightTime.ChangeTime(0, 0, 6, 1, true, false);
         ui.fadeToBlack(false);
     }
-
+    
+    // triggers the fade to black effect for sleeping
     public void SleepSequence() {
         StartCoroutine(sleepFade());
     }
 
+    // adds money to player
     public void AddMoney(int money) {
         this.money += money;
     }
 
+    // removes money from player
     public bool RemoveMoney(int money) {
         if (this.money - money < 0) {
             return false;
@@ -198,12 +203,13 @@ public class GameManager : MonoBehaviour
         return cellPosition;
     }
 
+    // removes a tile (primarily for harvesting)
     public void removeTile(Vector3Int cellPosition) {
         activeTiles.Remove(cellPosition);
         interactableMap.SetTile(cellPosition, hiddenInteractable);
     }
 
-
+    // adds a tile to the interactable map
     public void addTile(Vector3Int cellPosition, string tileName) {
         TileBase tile = interactableMap.GetTile(cellPosition);
 
@@ -235,12 +241,12 @@ public class GameManager : MonoBehaviour
                 if (tile != null && tile.name == "carrotFarmingTiles_1" && activeTiles.ContainsKey(cellPosition)) {
                     activeTiles[cellPosition] = 3;
                     interactableMap.SetTile(cellPosition, stage1Grow);
-                }
-    
+                } 
                 break;
         }    
     }
 
+    // fade to black effect for the vendor scene
     public void VendorSetup() {
         StartCoroutine(vendorSet());
     } 
@@ -258,12 +264,15 @@ public class GameManager : MonoBehaviour
                 switch(tile.name) {
                     case "carrotFarmingTiles_2":
                         interactableMap.SetTile(position, stage2Grow);
+                        activeTiles[position] = 4;
                         break;
                     case "carrotFarmingTiles_3":
                         interactableMap.SetTile(position, stage3Grow);
+                        activeTiles[position] = 5;
                         break;
                     case "carrotFarmingTiles_4":
                         interactableMap.SetTile(position, stage4Grow);
+                        activeTiles[position] = 6;
                         break;   
                 }
             }
