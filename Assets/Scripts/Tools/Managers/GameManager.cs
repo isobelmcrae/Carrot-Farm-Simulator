@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Rendering;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,10 +25,54 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Tile hiddenInteractable;
     [SerializeField] private Tile tilled;
     [SerializeField] private Tile watered;
+<<<<<<< Updated upstream
     [SerializeField] private Tile stage1Grow;
     [SerializeField] private Tile stage2Grow;
     [SerializeField] private Tile stage3Grow;
     [SerializeField] private Tile stage4Grow;
+=======
+
+    public Tile[] tiles;
+    [SerializeField] private Tile stage1CarrotGrow;
+    [SerializeField] private Tile stage2CarrotGrow;
+    [SerializeField] private Tile stage3CarrotGrow;
+    [SerializeField] private Tile stage4CarrotGrow;
+
+    [SerializeField] private Tile stage1BabyGrow;
+    [SerializeField] private Tile stage2BabyGrow;
+    [SerializeField] private Tile stage3BabyGrow;
+    [SerializeField] private Tile stage4BabyGrow;
+
+    [SerializeField] private Tile stage1DirtyGrow;
+    [SerializeField] private Tile stage2DirtyGrow;
+    [SerializeField] private Tile stage3DirtyGrow;
+    [SerializeField] private Tile stage4DirtyGrow;
+
+    [SerializeField] private Tile stage1MuscleGrow;
+    [SerializeField] private Tile stage2MuscleGrow;
+    [SerializeField] private Tile stage3MuscleGrow;
+    [SerializeField] private Tile stage4MuscleGrow;
+
+    [SerializeField] private Tile stage1PrincessGrow;
+    [SerializeField] private Tile stage2PrincessGrow;
+    [SerializeField] private Tile stage3PrincessGrow;
+    [SerializeField] private Tile stage4PrincessGrow;
+
+    [SerializeField] private Tile stage1LoversGrow;
+    [SerializeField] private Tile stage2LoversGrow;
+    [SerializeField] private Tile stage3LoversGrow;
+    [SerializeField] private Tile stage4LoversGrow;
+
+    [SerializeField] private Tile stage1SuperGrow;
+    [SerializeField] private Tile stage2SuperGrow;
+    [SerializeField] private Tile stage3SuperGrow;
+    [SerializeField] private Tile stage4SuperGrow;
+
+    [SerializeField] private Tile stage1GoldenGrow;
+    [SerializeField] private Tile stage2GoldenGrow;
+    [SerializeField] private Tile stage3GoldenGrow;
+    [SerializeField] private Tile stage4GoldenGrow;
+>>>>>>> Stashed changes
 
     [Header("Time")]
 
@@ -107,12 +153,17 @@ public class GameManager : MonoBehaviour
     // checks if the carrot's stage is the highest stage (therefore is harvestable)
     public bool isHarvestable(Vector3Int position) {
         TileBase tile = interactableMap.GetTile(position);
+<<<<<<< Updated upstream
         if (tile != null) {
             if (tile.name == "carrotFarmingTiles_5") {
                 return true;
             } else {
                 return false;
             }
+=======
+        if (tile != null && activeTiles[position] == 5) {
+            return true;
+>>>>>>> Stashed changes
         } else {
             return false;
         }
@@ -217,37 +268,55 @@ public class GameManager : MonoBehaviour
             
             case "tilled":
                 if(activeTiles.Count == 0) {
-                    activeTiles.Add(cellPosition, 1);
-                    interactableMap.SetTile(cellPosition, tilled);
+                    activeTiles.Add(cellPosition, 0);
+                    interactableMap.SetTile(cellPosition, tiles[0]);
 
                 } else if (!activeTiles.ContainsKey(cellPosition)){
-                    activeTiles.Add(cellPosition, 1);
-                    interactableMap.SetTile(cellPosition, tilled);
+                    activeTiles.Add(cellPosition, 0);
+                    interactableMap.SetTile(cellPosition, tiles[0]);
                 } 
 
                 break;
 
             case "watered":
 
+<<<<<<< Updated upstream
                 if (tile != null && tile.name == "carrotFarmingTiles_0" && activeTiles.ContainsKey(cellPosition)) {
                     activeTiles[cellPosition] = 2;
                     interactableMap.SetTile(cellPosition, watered);
+=======
+                if (tile != null && tile == tiles[0] && activeTiles.ContainsKey(cellPosition)) {
+                    activeTiles[cellPosition] = 1;
+                    interactableMap.SetTile(cellPosition, tiles[1]);
+>>>>>>> Stashed changes
                 }
 
                 break;
             
             case "stage1Grow":
     
+<<<<<<< Updated upstream
                 if (tile != null && tile.name == "carrotFarmingTiles_1" && activeTiles.ContainsKey(cellPosition)) {
                     activeTiles[cellPosition] = 3;
                     interactableMap.SetTile(cellPosition, stage1Grow);
+=======
+                if (tile != null && tile.name == "carrottiles_1" && activeTiles.ContainsKey(cellPosition)) {
+                    activeTiles[cellPosition] = 2;
+                    interactableMap.SetTile(cellPosition, stage1CarrotGrow);
+>>>>>>> Stashed changes
                     // removes carrot seed from inventory after planting
                     inventoryManager.GetSelectedItem(true);
                 }
     
                 break;
+<<<<<<< Updated upstream
         }    
     }
+=======
+            }
+        }
+    
+>>>>>>> Stashed changes
 
     // fade to black effect for the vendor scene
     public void VendorSetup() {
@@ -258,11 +327,9 @@ public class GameManager : MonoBehaviour
         StartCoroutine(farmSet());
     }
 
-
     public void growCrops() {
-        foreach(var position in interactableMap.cellBounds.allPositionsWithin) {
-            TileBase tile = interactableMap.GetTile(position);
 
+<<<<<<< Updated upstream
             if (tile != null) {
                 switch(tile.name) {
                     case "carrotFarmingTiles_2":
@@ -278,6 +345,21 @@ public class GameManager : MonoBehaviour
                         activeTiles[position] = 6;
                         break;   
                 }
+=======
+        foreach(var position in interactableMap.cellBounds.allPositionsWithin) {
+
+            TileBase tile = interactableMap.GetTile(position);
+            // the indexes of all of the final stages of the crops
+            var endStages = new [] {"5", "9", "13", "17", "21", "25", "29", "33"};
+
+            // checks if the tile is a crop and not in the final stage
+            if (tile != null && tile.name != "Interactable" && !endStages.Any(tile.name.EndsWith)) {
+                // pulls numbers from tile name
+                int index = int.Parse(Regex.Match(tile.name, @"\d+$", RegexOptions.RightToLeft).Value);
+                // sets the tile to the next stage from the tiles array
+                interactableMap.SetTile(position, tiles[index + 1]);
+                activeTiles[position]++;
+>>>>>>> Stashed changes
             }
         }
     }
