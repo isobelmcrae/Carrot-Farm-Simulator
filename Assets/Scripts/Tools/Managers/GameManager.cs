@@ -280,43 +280,26 @@ public class GameManager : MonoBehaviour
 
             case "watered":
 
-<<<<<<< Updated upstream
-                if (tile != null && tile.name == "carrotFarmingTiles_0" && activeTiles.ContainsKey(cellPosition)) {
-                    activeTiles[cellPosition] = 2;
-                    interactableMap.SetTile(cellPosition, watered);
-=======
                 if (tile != null && tile == tiles[0] && activeTiles.ContainsKey(cellPosition)) {
                     activeTiles[cellPosition] = 1;
                     interactableMap.SetTile(cellPosition, tiles[1]);
->>>>>>> Stashed changes
                 }
 
                 break;
             
             case "stage1Grow":
-    
-<<<<<<< Updated upstream
-                if (tile != null && tile.name == "carrotFarmingTiles_1" && activeTiles.ContainsKey(cellPosition)) {
-                    activeTiles[cellPosition] = 3;
-                    interactableMap.SetTile(cellPosition, stage1Grow);
-=======
-                if (tile != null && tile.name == "carrottiles_1" && activeTiles.ContainsKey(cellPosition)) {
+
+                if (tile != null && tile == tiles[1] && activeTiles.ContainsKey(cellPosition)) {
                     activeTiles[cellPosition] = 2;
-                    interactableMap.SetTile(cellPosition, stage1CarrotGrow);
->>>>>>> Stashed changes
+                    interactableMap.SetTile(cellPosition, tiles[3]);
                     // removes carrot seed from inventory after planting
                     inventoryManager.GetSelectedItem(true);
                 }
     
                 break;
-<<<<<<< Updated upstream
-        }    
-    }
-=======
             }
         }
-    
->>>>>>> Stashed changes
+
 
     // fade to black effect for the vendor scene
     public void VendorSetup() {
@@ -329,23 +312,6 @@ public class GameManager : MonoBehaviour
 
     public void growCrops() {
 
-<<<<<<< Updated upstream
-            if (tile != null) {
-                switch(tile.name) {
-                    case "carrotFarmingTiles_2":
-                        interactableMap.SetTile(position, stage2Grow);
-                        activeTiles[position] = 4;
-                        break;
-                    case "carrotFarmingTiles_3":
-                        interactableMap.SetTile(position, stage3Grow);
-                        activeTiles[position] = 5;
-                        break;
-                    case "carrotFarmingTiles_4":
-                        interactableMap.SetTile(position, stage4Grow);
-                        activeTiles[position] = 6;
-                        break;   
-                }
-=======
         foreach(var position in interactableMap.cellBounds.allPositionsWithin) {
 
             TileBase tile = interactableMap.GetTile(position);
@@ -359,7 +325,7 @@ public class GameManager : MonoBehaviour
                 // sets the tile to the next stage from the tiles array
                 interactableMap.SetTile(position, tiles[index + 1]);
                 activeTiles[position]++;
->>>>>>> Stashed changes
+
             }
         }
     }
