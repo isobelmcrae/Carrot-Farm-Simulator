@@ -142,7 +142,7 @@ public class GameManager : MonoBehaviour
     public bool isHarvestable(Vector3Int position) {
         TileBase tile = interactableMap.GetTile(position);
         if (tile != null) {
-            if (tile.name == "carrotFarmingTiles_5") {
+            if (tile.name == "carrottiles_5") {
                 return true;
             } else {
                 return false;
