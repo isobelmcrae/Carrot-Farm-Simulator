@@ -153,17 +153,9 @@ public class GameManager : MonoBehaviour
     // checks if the carrot's stage is the highest stage (therefore is harvestable)
     public bool isHarvestable(Vector3Int position) {
         TileBase tile = interactableMap.GetTile(position);
-<<<<<<< Updated upstream
-        if (tile != null) {
-            if (tile.name == "carrotFarmingTiles_5") {
-                return true;
-            } else {
-                return false;
-            }
-=======
+
         if (tile != null && activeTiles[position] == 5) {
             return true;
->>>>>>> Stashed changes
         } else {
             return false;
         }
