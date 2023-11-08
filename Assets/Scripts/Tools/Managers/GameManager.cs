@@ -25,12 +25,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Tile hiddenInteractable;
     [SerializeField] private Tile tilled;
     [SerializeField] private Tile watered;
-<<<<<<< Updated upstream
-    [SerializeField] private Tile stage1Grow;
-    [SerializeField] private Tile stage2Grow;
-    [SerializeField] private Tile stage3Grow;
-    [SerializeField] private Tile stage4Grow;
-=======
 
     public Tile[] tiles;
     [SerializeField] private Tile stage1CarrotGrow;
@@ -72,7 +66,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Tile stage2GoldenGrow;
     [SerializeField] private Tile stage3GoldenGrow;
     [SerializeField] private Tile stage4GoldenGrow;
->>>>>>> Stashed changes
+
 
     [Header("Time")]
 
