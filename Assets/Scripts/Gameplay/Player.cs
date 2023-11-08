@@ -102,47 +102,27 @@ public class Player : MonoBehaviour
                         game.harvest(cellPosition);
                     } else                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 {
                         // checks if circumstances are perfect for seed planting
-                        game.addTile(cellPosition, "stage1Grow");
+                        game.addTile(cellPosition, "stage1CarrotGrow");
                     }
 
                     break;
 
-                case "Lover Carrot Seed":
-                    if (game.isHarvestable(cellPosition)) {
-                        game.harvest(cellPosition);
-                    } else {
-                        // checks if circumstances are perfect for seed planting
-                        game.addTile(cellPosition, "stage1Grow");
-                    }
-
-                    break;
-                
                 case "Baby Carrot Seed":
                     if (game.isHarvestable(cellPosition)) {
                         game.harvest(cellPosition);
                     } else {
                         // checks if circumstances are perfect for seed planting
-                        game.addTile(cellPosition, "stage1Grow");
+                        game.addTile(cellPosition, "stage1BabyGrow");
                     }
 
                     break;
-
+                
                 case "Dirty Carrot Seed":
                     if (game.isHarvestable(cellPosition)) {
                         game.harvest(cellPosition);
                     } else {
                         // checks if circumstances are perfect for seed planting
-                        game.addTile(cellPosition, "stage1Grow");
-                    }
-
-                    break;
-                
-                case "Golden Carrot Seed":
-                    if (game.isHarvestable(cellPosition)) {
-                        game.harvest(cellPosition);
-                    } else {
-                        // checks if circumstances are perfect for seed planting
-                        game.addTile(cellPosition, "stage1Grow");
+                        game.addTile(cellPosition, "stage1DirtyGrow");
                     }
 
                     break;
@@ -152,7 +132,7 @@ public class Player : MonoBehaviour
                         game.harvest(cellPosition);
                     } else {
                         // checks if circumstances are perfect for seed planting
-                        game.addTile(cellPosition, "stage1Grow");
+                        game.addTile(cellPosition, "stage1MuscleGrow");
                     }
 
                     break;
@@ -162,17 +142,37 @@ public class Player : MonoBehaviour
                         game.harvest(cellPosition);
                     } else {
                         // checks if circumstances are perfect for seed planting
-                        game.addTile(cellPosition, "stage1Grow");
+                        game.addTile(cellPosition, "stage1PrincessGrow");
                     }
 
                     break;
 
+                case "Lovers Carrot Seed":
+                    if (game.isHarvestable(cellPosition)) {
+                        game.harvest(cellPosition);
+                    } else {
+                        // checks if circumstances are perfect for seed planting
+                        game.addTile(cellPosition, "stage1LoversGrow");
+                    }
+
+                    break;
+                
                 case "Super Carrot Seed":
                     if (game.isHarvestable(cellPosition)) {
                         game.harvest(cellPosition);
                     } else {
                         // checks if circumstances are perfect for seed planting
-                        game.addTile(cellPosition, "stage1Grow");
+                        game.addTile(cellPosition, "stage1SuperGrow");
+                    }
+
+                    break;
+
+                case "Golden Carrot Seed":
+                    if (game.isHarvestable(cellPosition)) {
+                        game.harvest(cellPosition);
+                    } else {
+                        // checks if circumstances are perfect for seed planting
+                        game.addTile(cellPosition, "stage1GoldenGrow");
                     }
 
                     break;
