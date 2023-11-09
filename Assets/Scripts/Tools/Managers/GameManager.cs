@@ -23,8 +23,6 @@ public class GameManager : MonoBehaviour
     [Header("Tiles")]
 
     [SerializeField] private Tile hiddenInteractable;
-    [SerializeField] private Tile tilled;
-    [SerializeField] private Tile watered;
 
     public Tile[] tiles;
 
@@ -35,7 +33,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Vendor")]
     public Volume ppv;
-    public Camera vendorCam;
+    public Camera vendorCam;    
     public Light2D globalLight;
 
     // vendor scene player spotlights
@@ -47,11 +45,17 @@ public class GameManager : MonoBehaviour
     [Header("UI")]
     public UIManager ui;
 
+    [Header("Items")]
+    public Item carrot;
+    public Item lovers;
+    public Item baby;
+    public Item dirty;
+    public Item muscle;
+    public Item princess;
+    
     [Header("Misc")]
 
     public int money = 0;
-    public Item carrot;
-    public Item lovers;
     public InventoryManager inventoryManager;
     public GameObject endDayMenu;
 
@@ -130,6 +134,26 @@ public class GameManager : MonoBehaviour
                 case "lovers":
                     inventoryManager.AddItem(lovers);
                     break;
+
+                case "baby":
+                    inventoryManager.AddItem(baby);
+                    break;
+
+                case "dirty":
+                    inventoryManager.AddItem(dirty);
+                    break;
+                
+                case "muscle":
+                    inventoryManager.AddItem(muscle);
+                    break;
+
+                case "princess":
+                    inventoryManager.AddItem(princess);
+                    break;
+
+                
+
+                
             }
             removeTile(position);
         } 
