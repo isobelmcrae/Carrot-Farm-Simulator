@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     private Grid grid;
     private Camera cam;
 
-    Dictionary<Vector3Int, int> activeTiles = new Dictionary<Vector3Int, int>();
+    Dictionary<Vector3Int, string> activeTiles = new Dictionary<Vector3Int, string>();
     public Tilemap interactableMap;
     
     [Header("Tiles")]
@@ -27,46 +27,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Tile watered;
 
     public Tile[] tiles;
-    [SerializeField] private Tile stage1CarrotGrow;
-    [SerializeField] private Tile stage2CarrotGrow;
-    [SerializeField] private Tile stage3CarrotGrow;
-    [SerializeField] private Tile stage4CarrotGrow;
-
-    [SerializeField] private Tile stage1BabyGrow;
-    [SerializeField] private Tile stage2BabyGrow;
-    [SerializeField] private Tile stage3BabyGrow;
-    [SerializeField] private Tile stage4BabyGrow;
-
-    [SerializeField] private Tile stage1DirtyGrow;
-    [SerializeField] private Tile stage2DirtyGrow;
-    [SerializeField] private Tile stage3DirtyGrow;
-    [SerializeField] private Tile stage4DirtyGrow;
-
-    [SerializeField] private Tile stage1MuscleGrow;
-    [SerializeField] private Tile stage2MuscleGrow;
-    [SerializeField] private Tile stage3MuscleGrow;
-    [SerializeField] private Tile stage4MuscleGrow;
-
-    [SerializeField] private Tile stage1PrincessGrow;
-    [SerializeField] private Tile stage2PrincessGrow;
-    [SerializeField] private Tile stage3PrincessGrow;
-    [SerializeField] private Tile stage4PrincessGrow;
-
-    [SerializeField] private Tile stage1LoversGrow;
-    [SerializeField] private Tile stage2LoversGrow;
-    [SerializeField] private Tile stage3LoversGrow;
-    [SerializeField] private Tile stage4LoversGrow;
-
-    [SerializeField] private Tile stage1SuperGrow;
-    [SerializeField] private Tile stage2SuperGrow;
-    [SerializeField] private Tile stage3SuperGrow;
-    [SerializeField] private Tile stage4SuperGrow;
-
-    [SerializeField] private Tile stage1GoldenGrow;
-    [SerializeField] private Tile stage2GoldenGrow;
-    [SerializeField] private Tile stage3GoldenGrow;
-    [SerializeField] private Tile stage4GoldenGrow;
-
 
     [Header("Time")]
 
@@ -147,8 +107,9 @@ public class GameManager : MonoBehaviour
     // checks if the carrot's stage is the highest stage (therefore is harvestable)
     public bool isHarvestable(Vector3Int position) {
         TileBase tile = interactableMap.GetTile(position);
+        var endStages = new [] {"5", "9", "13", "17", "21", "25", "29", "33"};
 
-        if (tile != null && activeTiles[position] == 5) {
+        if (tile != null && endStages.Any(tile.name.EndsWith)) {
             return true;
         } else {
             return false;
@@ -247,18 +208,17 @@ public class GameManager : MonoBehaviour
     }
 
     // adds a tile to the interactable map
-    public void addTile(Vector3Int cellPosition, string tileName) {
+    public void addTile(Vector3Int cellPosition, string tileName, string type) {
         TileBase tile = interactableMap.GetTile(cellPosition);
-
+        
         switch(tileName) {
-            
             case "tilled":
                 if(activeTiles.Count == 0) {
-                    activeTiles.Add(cellPosition, 0);
+                    activeTiles.Add(cellPosition, null);
                     interactableMap.SetTile(cellPosition, tiles[0]);
 
                 } else if (!activeTiles.ContainsKey(cellPosition)){
-                    activeTiles.Add(cellPosition, 0);
+                    activeTiles.Add(cellPosition, null);
                     interactableMap.SetTile(cellPosition, tiles[0]);
                 } 
 
@@ -267,7 +227,6 @@ public class GameManager : MonoBehaviour
             case "watered":
 
                 if (tile != null && tile == tiles[0] && activeTiles.ContainsKey(cellPosition)) {
-                    activeTiles[cellPosition] = 1;
                     interactableMap.SetTile(cellPosition, tiles[1]);
                 }
 
@@ -276,8 +235,34 @@ public class GameManager : MonoBehaviour
             case "stage1Grow":
 
                 if (tile != null && tile == tiles[1] && activeTiles.ContainsKey(cellPosition)) {
-                    activeTiles[cellPosition] = 2;
-                    interactableMap.SetTile(cellPosition, tiles[3]);
+                    activeTiles[cellPosition] = type;
+
+                    switch(type) {
+                        case "carrot":
+                            interactableMap.SetTile(cellPosition, tiles[2]);
+                            break;
+                        case "baby":
+                            interactableMap.SetTile(cellPosition, tiles[6]);
+                            break;
+                        case "dirty":
+                            interactableMap.SetTile(cellPosition, tiles[10]);
+                            break;
+                        case "muscle":
+                            interactableMap.SetTile(cellPosition, tiles[14]);
+                            break;
+                        case "princess":
+                            interactableMap.SetTile(cellPosition, tiles[18]);
+                            break;
+                        case "lovers":
+                            interactableMap.SetTile(cellPosition, tiles[22]);
+                            break;
+                        case "super":
+                            interactableMap.SetTile(cellPosition, tiles[26]);
+                            break;
+                        case "golden":
+                            interactableMap.SetTile(cellPosition, tiles[30]);
+                            break;
+                    }
                     // removes carrot seed from inventory after planting
                     inventoryManager.GetSelectedItem(true);
                 }
@@ -310,7 +295,6 @@ public class GameManager : MonoBehaviour
                 int index = int.Parse(Regex.Match(tile.name, @"\d+$", RegexOptions.RightToLeft).Value);
                 // sets the tile to the next stage from the tiles array
                 interactableMap.SetTile(position, tiles[index + 1]);
-                activeTiles[position]++;
 
             }
         }
