@@ -70,7 +70,7 @@ public class Player : MonoBehaviour
                 // check for null value
                 case null:
                     if (game.isHarvestable(cellPosition)) {
-                        game.harvest(cellPosition);
+                        game.harvest(cellPosition, game.activeTiles[cellPosition]);
                     }
                     break;
 
@@ -81,7 +81,7 @@ public class Player : MonoBehaviour
                         animator.Play("PlayerHoe");
                     } else {
                         if (game.isHarvestable(cellPosition)) {
-                            game.harvest(cellPosition);
+                            game.harvest(cellPosition, game.activeTiles[cellPosition]);
                         }
                     }
 
@@ -93,13 +93,13 @@ public class Player : MonoBehaviour
                     animator.Play("Player_WateringCan");
 
                     if (game.isHarvestable(cellPosition)) {
-                        game.harvest(cellPosition);
+                        game.harvest(cellPosition, game.activeTiles[cellPosition]);
                     } 
                     break;
                 
                 case "Carrot Seed":
                     if (game.isHarvestable(cellPosition)) {
-                        game.harvest(cellPosition);
+                        game.harvest(cellPosition, game.activeTiles[cellPosition]);
                     } else                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 {
                         // checks if circumstances are perfect for seed planting
                         game.addTile(cellPosition, "stage1Grow", "carrot");
@@ -108,9 +108,8 @@ public class Player : MonoBehaviour
                     break;
 
                 case "Lover Carrots Seed":
-                    Debug.Log("used");
                     if (game.isHarvestable(cellPosition)) {
-                        game.harvest(cellPosition);
+                        game.harvest(cellPosition, game.activeTiles[cellPosition]);
                     } else {
                         // checks if circumstances are perfect for seed planting
                         game.addTile(cellPosition, "stage1Grow", "lovers");

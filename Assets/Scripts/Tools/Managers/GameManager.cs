@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     private Grid grid;
     private Camera cam;
 
-    Dictionary<Vector3Int, string> activeTiles = new Dictionary<Vector3Int, string>();
+    public Dictionary<Vector3Int, string> activeTiles = new Dictionary<Vector3Int, string>();
     public Tilemap interactableMap;
     
     [Header("Tiles")]
@@ -50,7 +50,8 @@ public class GameManager : MonoBehaviour
     [Header("Misc")]
 
     public int money = 0;
-    public Item Carrot;
+    public Item carrot;
+    public Item lovers;
     public InventoryManager inventoryManager;
     public GameObject endDayMenu;
 
@@ -118,10 +119,18 @@ public class GameManager : MonoBehaviour
 
     
    // harvests tile at position if harvestable
-    public void harvest(Vector3Int position) {
+    public void harvest(Vector3Int position, string type) {
         TileBase tile = interactableMap.GetTile(position);
         if (isHarvestable(position)) {
-            inventoryManager.AddItem(Carrot);
+            switch (type) {
+                case "carrot":
+                    inventoryManager.AddItem(carrot);
+                    break;
+
+                case "lovers":
+                    inventoryManager.AddItem(lovers);
+                    break;
+            }
             removeTile(position);
         } 
     }
