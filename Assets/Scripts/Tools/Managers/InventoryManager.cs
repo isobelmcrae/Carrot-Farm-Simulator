@@ -11,10 +11,10 @@ public class InventoryManager : MonoBehaviour
     public GameObject inventoryItemPrefab;
 
     public TMP_Text inventoryText;
-    public Animator animator;
+    public Animator hotbarName;
 
     public void Awake() {
-        animator = inventoryText.GetComponent<Animator>();
+        hotbarName = inventoryText.GetComponent<Animator>();
     }
     // default selected slot is 0
     int selectedSlot = 0;
@@ -24,9 +24,11 @@ public class InventoryManager : MonoBehaviour
         if (selectedSlot >= 0) {
             inventorySlots[selectedSlot].Deselect();
         }
-
         inventorySlots[newValue].Select();
         selectedSlot = newValue;
+        if (GetSelectedItem(false) != null) {
+        hotbarName.Play("HotbarItemNameAnimation");
+        }
     }
 
     // if the user inputs a number from 1-7, change the selected slot to that num - 1
@@ -36,7 +38,10 @@ public class InventoryManager : MonoBehaviour
             if (isNumber && number > 0 && number < 8)
             {
                 ChangeSelectedSlot(number - 1);
-                // inventoryText.text = GetSelectedItem(false).name.ToLower();
+                if (GetSelectedItem(false) != null)
+                {
+                    inventoryText.text = GetSelectedItem(false).name.ToLower();
+                }
             }
         }
     }
