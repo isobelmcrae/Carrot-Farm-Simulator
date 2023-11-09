@@ -320,7 +320,7 @@ public class GameManager : MonoBehaviour
 
             TileBase tile = interactableMap.GetTile(position);
             // the indexes of all of the final stages of the crops
-            var endStages = new [] {"5", "9", "13", "17", "21", "25", "29", "33"};
+            var endStages = new [] {"0", "1", "5", "9", "13", "17", "21", "25", "29", "33"};
 
             // checks if the tile is a crop and not in the final stage
             if (tile != null && tile.name != "Interactable" && !endStages.Any(tile.name.EndsWith)) {

@@ -3885,7 +3885,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: item name here
+  m_text: Item Name
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1ac17423c3c14478a2c2c0934c7d84d, type: 2}
   m_sharedMaterial: {fileID: 127081423360661584, guid: b1ac17423c3c14478a2c2c0934c7d84d, type: 2}
@@ -3972,7 +3972,7 @@ Animator:
   m_GameObject: {fileID: 233064526}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a3155067b8a3b954e961a7893f05f2c8, type: 2}
+  m_Controller: {fileID: 9100000, guid: 551db7bad0001214d97bc1e57fb6501c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -34177,7 +34177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1020209328
 RectTransform:
   m_ObjectHideFlags: 0
@@ -34872,7 +34872,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1225036783
 RectTransform:
   m_ObjectHideFlags: 0
@@ -40424,7 +40424,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1462788897
 RectTransform:
   m_ObjectHideFlags: 0
@@ -49471,8 +49471,6 @@ MonoBehaviour:
   player: {fileID: 580219583}
   interactableMap: {fileID: 2109856123}
   hiddenInteractable: {fileID: 11400000, guid: 7bddb67b9291fa045be5a30744494763, type: 2}
-  tilled: {fileID: 11400000, guid: 1ec524b30e1ca44759e0cf49471cce49, type: 2}
-  watered: {fileID: 11400000, guid: b8afc2b2177474023b1e6fb8eb438620, type: 2}
   tiles:
   - {fileID: 11400000, guid: 29ce6ee97ca4f4621b854f425236318b, type: 2}
   - {fileID: 11400000, guid: 143b198ed17b142989dd7141fe95afa8, type: 2}
@@ -49516,9 +49514,13 @@ MonoBehaviour:
   playerSpotlight1: {fileID: 1842901906}
   playerSpotlight2: {fileID: 166775033}
   ui: {fileID: 792309674}
-  money: 0
   carrot: {fileID: 11400000, guid: dd4fccfc04cacbb4391f2ad9bc55ab35, type: 2}
   lovers: {fileID: 11400000, guid: f0a0382fa090a4f288c73e41451090fc, type: 2}
+  baby: {fileID: 0}
+  dirty: {fileID: 0}
+  muscle: {fileID: 0}
+  princess: {fileID: 0}
+  money: 0
   inventoryManager: {fileID: 2101294268}
   endDayMenu: {fileID: 1658379487}
   inMenu: 0
@@ -56501,7 +56503,7 @@ Tilemap:
       - {fileID: 54356839, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
       - {fileID: 435326793, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
       - {fileID: -1398982570, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 3, y: 12, z: 0}
@@ -56600,7 +56602,7 @@ Tilemap:
       - {fileID: 54356839, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
       - {fileID: 435326793, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
       - {fileID: -1398982570, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 2
       m_Flags: 0
   - first: {x: 0, y: 14, z: 0}
@@ -56710,7 +56712,7 @@ Tilemap:
       - {fileID: 54356839, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
       - {fileID: 435326793, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
       - {fileID: -1398982570, guid: ff1f55f8f5e014b6cb914c3b1a9c5a48, type: 3}
-      m_AnimationSpeed: 5.0000005
+      m_AnimationSpeed: 5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 4, y: 15, z: 0}
@@ -60459,7 +60461,7 @@ MonoBehaviour:
   - {fileID: 816767475}
   inventoryItemPrefab: {fileID: 656594663824276896, guid: 16299b87cacd94c8b8d9341b2aa24dcf, type: 3}
   inventoryText: {fileID: 233064528}
-  animator: {fileID: 0}
+  hotbarName: {fileID: 0}
 --- !u!4 &2101294269
 Transform:
   m_ObjectHideFlags: 0

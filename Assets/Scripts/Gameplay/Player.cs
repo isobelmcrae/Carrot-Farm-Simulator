@@ -155,7 +155,7 @@ public class Player : MonoBehaviour
             case "Door":
                 if (game.inHouse == true) {
                     game.inHouse = false;
-                    GameObject.Find("Roof").GetComponent<TilemapRenderer>().sortingOrder = 6;
+                    GameObject.Find("Roof").GetComponent<TilemapRenderer>().sortingOrder = 10;
                 } else {
                     game.inHouse = true;
                     GameObject.Find("Roof").GetComponent<TilemapRenderer>().sortingOrder = -1;
