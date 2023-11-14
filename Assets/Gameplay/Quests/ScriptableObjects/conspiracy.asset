@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79733b23d959d4ab7b0973b323d24f14, type: 3}
+  m_Name: conspiracy
+  m_EditorClassIdentifier: 
+  title: Carrot Cartel Conspiracy
+  description: Rumor has it that the Carrot Cartel has set up in the jungle. They
+    might be planning something big. Go investigate.
+  requirement: {fileID: 11400000, guid: dd4fccfc04cacbb4391f2ad9bc55ab35, type: 2}
+  quantity: 1
+  reward: 100
