@@ -150,9 +150,6 @@ public class GameManager : MonoBehaviour
                 case "princess":
                     inventoryManager.AddItem(princess);
                     break;
-
-                
-
                 
             }
             removeTile(position);

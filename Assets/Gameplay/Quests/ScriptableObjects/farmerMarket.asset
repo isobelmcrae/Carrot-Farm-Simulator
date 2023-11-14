@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 1
-  m_EditorClassIdentifier: Assembly-CSharp::Quest
-  title: Welcome to the Jungle
-  description: Welcome to your first quest! You are in a jungle. You see a tiger.
-    What do you do? Farm carrots!
+  m_Script: {fileID: 11500000, guid: 79733b23d959d4ab7b0973b323d24f14, type: 3}
+  m_Name: farmerMarket
+  m_EditorClassIdentifier: 
+  title: Farmer's Market Fiasco
+  description: The annual farmer's market is facing an unexpected shortage of carrots!
+    Help them out by bringing some of your own.
   requirement: {fileID: 11400000, guid: dd4fccfc04cacbb4391f2ad9bc55ab35, type: 2}
-  quantity: 1
-  reward: 10
+  quantity: 7
+  reward: 100
