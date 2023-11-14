@@ -17,25 +17,27 @@ public class NpcDialogue : MonoBehaviour
     private bool typing = false;
     private bool skipped = false;
 
+    private bool seenStarterText = false;
+    public GameObject storeMenu;
+
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
         {
-            if (dialoguePanel.activeInHierarchy)
-            {
-                StopAllCoroutines();
-                dialogueText.text = ""; 
-                dialoguePanel.SetActive(false);
-                index = 0;
-
-
-            }
-            else
-            {
-                dialoguePanel.SetActive(true);
-                StartCoroutine(Typing());
+            if (!seenStarterText) {
+                if (dialoguePanel.activeInHierarchy) {
+                    StopAllCoroutines();
+                    dialogueText.text = ""; 
+                    dialoguePanel.SetActive(false);
+                    index = 0;
+                } else {
+                    dialoguePanel.SetActive(true);
+                    StartCoroutine(Typing());
+                }
+            } else {
+                storeMenu.SetActive(true);
             }
 
         }
@@ -94,6 +96,8 @@ public class NpcDialogue : MonoBehaviour
         else
         {
             zeroText();
+            storeMenu.SetActive(true);
+            seenStarterText = true;
         }
     }
     private void OnTriggerEnter2D(Collider2D other)

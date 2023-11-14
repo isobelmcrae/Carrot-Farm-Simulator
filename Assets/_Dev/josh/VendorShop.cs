@@ -9,30 +9,28 @@ public class VendorShop : MonoBehaviour
     public InventoryManager inventory;
     public Item Item;
     public int cost;
-    public GameManager GameManager;
+    public GameManager game;
     public TMP_Text YourCoins;
 
 
     public void Start()
     {
-        YourCoins.text = "Coins: " + GameManager.money.ToString();
+        YourCoins.text = "Coins: " + game.money.ToString();
     }
-
 
     public void BuyItem()
     {
 
-        if (GameManager.money > cost)
+        if (game.money >= cost)
         {
-            GameManager.RemoveMoney(cost);
+            game.RemoveMoney(cost);
             inventory.AddItem(Item);
 
-            YourCoins.text = "Coins" + GameManager.money.ToString();
+            YourCoins.text = "Coins: " + game.money.ToString();
         }
-          
 
     }
-       
 
+    
 
 }
