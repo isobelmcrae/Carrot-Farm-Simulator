@@ -11,5 +11,7 @@ public class Quest : ScriptableObject
     public Item requirement;
     public int quantity;
     public int reward;
+
+    public int id;
     
 }

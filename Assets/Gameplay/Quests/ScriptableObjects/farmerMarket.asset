@@ -18,3 +18,4 @@ MonoBehaviour:
   requirement: {fileID: 11400000, guid: dd4fccfc04cacbb4391f2ad9bc55ab35, type: 2}
   quantity: 7
   reward: 100
+  id: 2
