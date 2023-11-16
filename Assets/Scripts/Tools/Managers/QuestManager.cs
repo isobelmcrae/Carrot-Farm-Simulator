@@ -13,7 +13,7 @@ public class QuestManager : MonoBehaviour
     void Start()
     {
         // loads quests into the quest menu
-        for (int i = 0; i < questButtons.Length; i++)
+        for (int i = 0; i < questButtons.Length - 1; i++)
         {
             int index = Random.Range(0, quests.Count - 1);
             buttonText[i].text = quests[index].title;
