@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79733b23d959d4ab7b0973b323d24f14, type: 3}
-  m_Name: jungle
+  m_Name: Granny
   m_EditorClassIdentifier: 
-  title: Welcome to the Jungle
-  description: You are in a jungle. You see a tiger. What do you do? Farm carrots!
+  title: Granny Norma Wants Your Carrot
+  description: Your Grandma has run out of carrots making her famous carrot pie!
+    Help her out by donating some of your carrots.
   requirement: {fileID: 11400000, guid: dd4fccfc04cacbb4391f2ad9bc55ab35, type: 2}
   quantity: 3
   reward: 20
-  id: 3
+  id: 4
