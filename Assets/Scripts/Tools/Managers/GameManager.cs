@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
 
     [Header("UI")]
     public UIManager ui;
+    public TMP_Text coins;
 
     [Header("Items")]
     public Item carrot;
@@ -96,6 +97,10 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < 10; i++) {
             inventoryManager.AddItem(carrotSeed);
         }
+    }
+
+    private void Update() {
+        coins.text = money.ToString();
     }
 
     // sets inMenu variable to true or false based on function input
