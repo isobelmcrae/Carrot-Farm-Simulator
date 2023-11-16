@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 10109610}
   - component: {fileID: 10109609}
   - component: {fileID: 10109608}
+  - component: {fileID: 10109611}
   m_Layer: 5
   m_Name: Lover C seeds
   m_TagString: Untagged
@@ -206,7 +207,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 10109609}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 10109611}
+        m_TargetAssemblyTypeName: VendorShop, Assembly-CSharp
+        m_MethodName: BuyItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &10109609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,6 +258,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 10109606}
   m_CullTransparentMesh: 1
+--- !u!114 &10109611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10109606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2690a3825611a4c2a9e7c76d856b0dfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 2101294268}
+  Item: {fileID: 11400000, guid: f5723239e06d743fcad9500c292183e8, type: 2}
+  cost: 300
+  game: {fileID: 1580488214}
+  YourCoins: {fileID: 909190502}
 --- !u!1 &29595695
 GameObject:
   m_ObjectHideFlags: 0
@@ -3346,7 +3376,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $20
+  m_text: $300
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1ac17423c3c14478a2c2c0934c7d84d, type: 2}
   m_sharedMaterial: {fileID: 127081423360661584, guid: b1ac17423c3c14478a2c2c0934c7d84d, type: 2}
@@ -3959,6 +3989,7 @@ GameObject:
   - component: {fileID: 206362523}
   - component: {fileID: 206362522}
   - component: {fileID: 206362521}
+  - component: {fileID: 206362524}
   m_Layer: 5
   m_Name: Fat C seeds
   m_TagString: Untagged
@@ -4030,7 +4061,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 206362522}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 206362524}
+        m_TargetAssemblyTypeName: VendorShop, Assembly-CSharp
+        m_MethodName: BuyItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &206362522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4069,6 +4112,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 206362519}
   m_CullTransparentMesh: 1
+--- !u!114 &206362524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206362519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2690a3825611a4c2a9e7c76d856b0dfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 2101294268}
+  Item: {fileID: 11400000, guid: 02264b552043843e5a6054f20ffaac9e, type: 2}
+  cost: 75
+  game: {fileID: 1580488214}
+  YourCoins: {fileID: 909190502}
 --- !u!1 &209431080
 GameObject:
   m_ObjectHideFlags: 0
@@ -6908,7 +6968,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $20
+  m_text: $1000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1ac17423c3c14478a2c2c0934c7d84d, type: 2}
   m_sharedMaterial: {fileID: 127081423360661584, guid: b1ac17423c3c14478a2c2c0934c7d84d, type: 2}
@@ -7220,16 +7280,16 @@ RectTransform:
   m_GameObject: {fileID: 345210064}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.13404825, y: 0.13404825, z: 0.13404825}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 579598798}
   - {fileID: 796723103}
-  m_Father: {fileID: 932988013}
+  m_Father: {fileID: 517635046}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -415}
+  m_AnchoredPosition: {x: 112.06434, y: -109.27615}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &346625826
@@ -10601,6 +10661,83 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aaed86224b4244758287c59beee0a64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &517635045
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 517635046}
+  - component: {fileID: 517635048}
+  - component: {fileID: 517635047}
+  m_Layer: 5
+  m_Name: Image 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &517635046
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517635045}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 7.46, y: 7.46, z: 7.46}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 1175679787}
+  - {fileID: 345210065}
+  m_Father: {fileID: 932988013}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -836, y: 414.64}
+  m_SizeDelta: {x: 30, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &517635047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517635045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 813507156, guid: 23df07cecbd6647f7958e28b70435e1d, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &517635048
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517635045}
+  m_CullTransparentMesh: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -10826,6 +10963,7 @@ GameObject:
   - component: {fileID: 546117487}
   - component: {fileID: 546117486}
   - component: {fileID: 546117485}
+  - component: {fileID: 546117488}
   m_Layer: 5
   m_Name: Golden C seeds
   m_TagString: Untagged
@@ -10897,7 +11035,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 546117486}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 546117488}
+        m_TargetAssemblyTypeName: VendorShop, Assembly-CSharp
+        m_MethodName: BuyItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &546117486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10936,6 +11086,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 546117483}
   m_CullTransparentMesh: 1
+--- !u!114 &546117488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546117483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2690a3825611a4c2a9e7c76d856b0dfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 2101294268}
+  Item: {fileID: 11400000, guid: f9ced3662c20b437899a1f4542f909ff, type: 2}
+  cost: 1000
+  game: {fileID: 1580488214}
+  YourCoins: {fileID: 909190502}
 --- !u!1 &565383432
 GameObject:
   m_ObjectHideFlags: 0
@@ -17053,7 +17220,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -836, y: 861}
+  m_AnchoredPosition: {x: -783.1002, y: 861.00024}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &579598799
@@ -32434,6 +32601,7 @@ GameObject:
   - component: {fileID: 746107357}
   - component: {fileID: 746107356}
   - component: {fileID: 746107355}
+  - component: {fileID: 746107358}
   m_Layer: 5
   m_Name: Dirty C seeds
   m_TagString: Untagged
@@ -32505,7 +32673,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 746107356}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 746107358}
+        m_TargetAssemblyTypeName: VendorShop, Assembly-CSharp
+        m_MethodName: BuyItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &746107356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32544,6 +32724,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 746107353}
   m_CullTransparentMesh: 1
+--- !u!114 &746107358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746107353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2690a3825611a4c2a9e7c76d856b0dfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 2101294268}
+  Item: {fileID: 11400000, guid: a9209b55b73db4c9c8b3dbab49b18196, type: 2}
+  cost: 50
+  game: {fileID: 1580488214}
+  YourCoins: {fileID: 909190502}
 --- !u!1 &770510567
 GameObject:
   m_ObjectHideFlags: 0
@@ -32915,7 +33112,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -786, y: 859}
+  m_AnchoredPosition: {x: -732.2998, y: 844.8}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &806937274
@@ -34686,6 +34883,7 @@ GameObject:
   - component: {fileID: 931665200}
   - component: {fileID: 931665199}
   - component: {fileID: 931665198}
+  - component: {fileID: 931665201}
   m_Layer: 5
   m_Name: Princess C seeds
   m_TagString: Untagged
@@ -34757,7 +34955,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 931665199}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 931665201}
+        m_TargetAssemblyTypeName: VendorShop, Assembly-CSharp
+        m_MethodName: BuyItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &931665199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34796,6 +35006,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 931665196}
   m_CullTransparentMesh: 1
+--- !u!114 &931665201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931665196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2690a3825611a4c2a9e7c76d856b0dfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 2101294268}
+  Item: {fileID: 11400000, guid: 1d20c648ad53e4d06bf650206d30791b, type: 2}
+  cost: 150
+  game: {fileID: 1580488214}
+  YourCoins: {fileID: 909190502}
 --- !u!1 &932988009
 GameObject:
   m_ObjectHideFlags: 0
@@ -34890,8 +35117,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1175679787}
-  - {fileID: 345210065}
+  - {fileID: 517635046}
   - {fileID: 831312948}
   - {fileID: 739451775}
   - {fileID: 1526092038}
@@ -35110,7 +35336,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $20
+  m_text: $150
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1ac17423c3c14478a2c2c0934c7d84d, type: 2}
   m_sharedMaterial: {fileID: 127081423360661584, guid: b1ac17423c3c14478a2c2c0934c7d84d, type: 2}
@@ -35857,6 +36083,7 @@ GameObject:
   - component: {fileID: 1029512554}
   - component: {fileID: 1029512553}
   - component: {fileID: 1029512552}
+  - component: {fileID: 1029512555}
   m_Layer: 5
   m_Name: Baby C seeds
   m_TagString: Untagged
@@ -35928,7 +36155,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1029512553}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1029512555}
+        m_TargetAssemblyTypeName: VendorShop, Assembly-CSharp
+        m_MethodName: BuyItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1029512553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35967,6 +36206,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1029512550}
   m_CullTransparentMesh: 1
+--- !u!114 &1029512555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029512550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2690a3825611a4c2a9e7c76d856b0dfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 2101294268}
+  Item: {fileID: 11400000, guid: 92cb5400a17924d2fb4b26a0f05bdeb8, type: 2}
+  cost: 20
+  game: {fileID: 1580488214}
+  YourCoins: {fileID: 909190502}
 --- !u!1 &1053848928
 GameObject:
   m_ObjectHideFlags: 0
@@ -36956,15 +37212,15 @@ RectTransform:
   m_GameObject: {fileID: 1175679786}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.13404825, y: 0.13404825, z: 0.13404825}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1754954540}
-  m_Father: {fileID: 932988013}
+  m_Father: {fileID: 517635046}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 124, y: -142}
+  m_AnchoredPosition: {x: 28.096527, y: -23.780167}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1175679788
@@ -43254,6 +43510,7 @@ GameObject:
   - component: {fileID: 1478340434}
   - component: {fileID: 1478340433}
   - component: {fileID: 1478340432}
+  - component: {fileID: 1478340435}
   m_Layer: 5
   m_Name: Superhero C seeds
   m_TagString: Untagged
@@ -43325,7 +43582,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1478340433}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1478340435}
+        m_TargetAssemblyTypeName: VendorShop, Assembly-CSharp
+        m_MethodName: BuyItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1478340433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43364,6 +43633,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1478340430}
   m_CullTransparentMesh: 1
+--- !u!114 &1478340435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478340430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2690a3825611a4c2a9e7c76d856b0dfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 2101294268}
+  Item: {fileID: 11400000, guid: 33b17148936244c57b6540eba5b06fa3, type: 2}
+  cost: 500
+  game: {fileID: 1580488214}
+  YourCoins: {fileID: 909190502}
 --- !u!1001 &1480820896
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43550,7 +43836,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $20
+  m_text: $50
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1ac17423c3c14478a2c2c0934c7d84d, type: 2}
   m_sharedMaterial: {fileID: 127081423360661584, guid: b1ac17423c3c14478a2c2c0934c7d84d, type: 2}
@@ -52975,7 +53261,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $20
+  m_text: $75
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1ac17423c3c14478a2c2c0934c7d84d, type: 2}
   m_sharedMaterial: {fileID: 127081423360661584, guid: b1ac17423c3c14478a2c2c0934c7d84d, type: 2}
@@ -56223,7 +56509,7 @@ GameObject:
   - component: {fileID: 1754954542}
   - component: {fileID: 1754954541}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Coin Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56236,8 +56522,8 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754954539}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -56245,7 +56531,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -39.2, y: 1.2}
+  m_AnchoredPosition: {x: -121.11047, y: 1.2001038}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1754954541
@@ -56754,10 +57040,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 932988013}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1794284477
 MonoBehaviour:
@@ -56947,7 +57233,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $20
+  m_text: $500
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1ac17423c3c14478a2c2c0934c7d84d, type: 2}
   m_sharedMaterial: {fileID: 127081423360661584, guid: b1ac17423c3c14478a2c2c0934c7d84d, type: 2}
