@@ -53,6 +53,7 @@ public class GameManager : MonoBehaviour
     public Item dirty;
     public Item muscle;
     public Item princess;
+    public Item hero;
 
     public Item hoe;
     public Item wateringCan;

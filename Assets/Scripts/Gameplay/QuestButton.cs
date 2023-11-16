@@ -20,6 +20,8 @@ public class QuestButton : MonoBehaviour
     public TMP_Text quantityText;
     public TMP_Text rewardText;
 
+    public GameObject tickButton;
+
     public void ToggleState() {
         gameObject.SetActive(!gameObject.activeSelf);
     }
@@ -30,6 +32,8 @@ public class QuestButton : MonoBehaviour
         itemImage.sprite = requirement.image;
         quantityText.text = quantity.ToString();
         rewardText.text = reward.ToString();
+        tickButton.GetComponent<TickButton>().requirement = requirement;
+        tickButton.GetComponent<TickButton>().reward = reward;
         questPopout.SetActive(true);
     }
 }
