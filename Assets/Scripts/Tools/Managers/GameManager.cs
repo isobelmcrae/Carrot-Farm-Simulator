@@ -52,6 +52,10 @@ public class GameManager : MonoBehaviour
     public Item dirty;
     public Item muscle;
     public Item princess;
+
+    public Item hoe;
+    public Item wateringCan;
+    public Item carrotSeed;
     
     [Header("Misc")]
 
@@ -85,6 +89,13 @@ public class GameManager : MonoBehaviour
 
         dayNightTime = dayNightLighting.GetComponent<DayNightLighting>();
         inventoryManager = FindObjectOfType<InventoryManager>();
+
+        inventoryManager.AddItem(hoe);
+        inventoryManager.AddItem(wateringCan);
+
+        for (int i = 0; i < 10; i++) {
+            inventoryManager.AddItem(carrotSeed);
+        }
     }
 
     // sets inMenu variable to true or false based on function input
